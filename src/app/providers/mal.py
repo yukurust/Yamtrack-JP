@@ -42,14 +42,19 @@ def handle_error(error):
 
 def search(media_type, query, page):
     """Search for media on MyAnimeList."""
+    from app.providers.mal_ja import japanese_requested  # noqa: PLC0415
+
+    japanese = japanese_requested()
     cache_key = f"search_{Sources.MAL.value}_{media_type}_{query}_{page}"
+    if japanese:
+        cache_key += "_ja"
     data = cache.get(cache_key)
 
     if data is None:
         url = f"{base_url}/{media_type}"
         params = {
             "q": query,
-            "fields": "media_type",
+            "fields": "media_type,alternative_titles" if japanese else "media_type",
             "limit": settings.PER_PAGE,
             "offset": (page - 1) * settings.PER_PAGE,
         }
@@ -73,7 +78,7 @@ def search(media_type, query, page):
                 "media_id": media["node"]["id"],
                 "source": Sources.MAL.value,
                 "media_type": media_type,
-                "title": media["node"]["title"],
+                "title": _search_title(media["node"], japanese=japanese),
                 "image": get_image_url(media["node"]),
             }
             for media in response
@@ -95,11 +100,12 @@ def anime(media_id):
     """Return the metadata for the selected anime or manga from MyAnimeList."""
     cache_key = f"{Sources.MAL.value}_{MediaTypes.ANIME.value}_{media_id}"
     data = cache.get(cache_key)
+    mal_payload = None
 
     if data is None:
         url = f"{base_url}/anime/{media_id}"
         params = {
-            "fields": f"{base_fields},num_episodes,average_episode_duration,studios,start_season,broadcast,source,related_anime",  # noqa: E501
+            "fields": _anime_fields(),
         }
 
         try:
@@ -152,8 +158,35 @@ def anime(media_id):
         }
 
         cache.set(cache_key, data)
+        mal_payload = response
 
-    return data
+    from app.providers.mal_ja import localize_anime  # noqa: PLC0415
+
+    return localize_anime(media_id, data, mal_payload=mal_payload)
+
+
+def _anime_fields():
+    """Request Japanese titles on related cards without a second MAL call."""
+    fields = (
+        f"{base_fields},num_episodes,average_episode_duration,studios,"
+        "start_season,broadcast,source,related_anime"
+    )
+    node = "{node{id,title,main_picture,alternative_titles}}"
+    return fields.replace("recommendations,", f"recommendations{node},").replace(
+        "related_anime",
+        f"related_anime{node}",
+    )
+
+
+def _search_title(node, *, japanese):
+    """Prefer the Japanese MAL title when the UI language is Japanese."""
+    if not japanese:
+        return node["title"]
+    return _japanese_node_title(node) or node["title"]
+
+
+def _japanese_node_title(node):
+    return ((node.get("alternative_titles") or {}).get("ja") or "").strip()
 
 
 def manga(media_id):
@@ -390,6 +423,7 @@ def get_related(related_medias, media_type):
                 "media_id": media["node"]["id"],
                 "source": Sources.MAL.value,
                 "title": media["node"]["title"],
+                "title_ja": _japanese_node_title(media["node"]),
                 "media_type": media_type,
                 "image": get_image_url(media["node"]),
             }

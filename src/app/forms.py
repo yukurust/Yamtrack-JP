@@ -2,8 +2,9 @@ import math
 
 from django import forms
 from django.conf import settings
+from django.utils.translation import gettext_lazy as _
 
-from app import config
+from app.i18n import status_label
 from app.models import (
     TV,
     Anime,
@@ -97,15 +98,15 @@ class ManualItemForm(forms.ModelForm):
     parent_tv = forms.ModelChoiceField(
         required=False,
         queryset=TV.objects.none(),
-        empty_label="Select",
-        label="Parent TV Show",
+        empty_label=_("Select"),
+        label=_("Parent TV Show"),
     )
 
     parent_season = forms.ModelChoiceField(
         required=False,
         queryset=Season.objects.none(),
-        empty_label="Select",
-        label="Parent Season",
+        empty_label=_("Select"),
+        label=_("Parent Season"),
     )
 
     class Meta:
@@ -229,9 +230,38 @@ class MediaForm(forms.ModelForm):
             if settings.TRACK_TIME
             else forms.DateInput(attrs={"type": "date"}),
             "notes": forms.Textarea(
-                attrs={"placeholder": "Add any notes or comments...", "rows": "5"},
+                attrs={"placeholder": _("Add any notes or comments..."), "rows": "5"},
             ),
         }
+
+    def __init__(self, *args, **kwargs):
+        """Translate tracker field labels without changing stored values."""
+        super().__init__(*args, **kwargs)
+        labels = {
+            "score": _("Score"),
+            "progress": _("Progress"),
+            "status": _("Status"),
+            "start_date": _("Start date"),
+            "end_date": _("End date"),
+            "notes": _("Notes"),
+        }
+        defaults = {
+            "score": "Score",
+            "progress": "Progress",
+            "status": "Status",
+            "start_date": "Start date",
+            "end_date": "End date",
+            "notes": "Notes",
+        }
+        for name, label in labels.items():
+            field = self.fields.get(name)
+            if field is not None and str(field.label) == defaults[name]:
+                field.label = label
+        if "status" in self.fields:
+            self.fields["status"].choices = [
+                (value, status_label(label))
+                for value, label in self.fields["status"].choices
+            ]
 
 
 class MangaForm(MediaForm):
@@ -242,9 +272,7 @@ class MangaForm(MediaForm):
 
         model = Manga
         labels = {
-            "progress": (
-                f"Progress ({config.get_unit(MediaTypes.MANGA.value, short=False)}s)"
-            ),
+            "progress": _("Progress (Chapters)"),
         }
 
 
@@ -279,7 +307,7 @@ class GameForm(MediaForm):
     progress = CustomDurationField(
         required=False,
         widget=forms.TextInput(attrs={"placeholder": "hh:mm"}),
-        label="Progress (Time Played)",
+        label=_("Progress (Time Played)"),
     )
 
     class Meta(MediaForm.Meta):
@@ -296,9 +324,7 @@ class BookForm(MediaForm):
 
         model = Book
         labels = {
-            "progress": (
-                f"Progress ({config.get_unit(MediaTypes.BOOK.value, short=False)}s)"
-            ),
+            "progress": _("Progress (Pages)"),
         }
 
 
@@ -310,9 +336,7 @@ class ComicForm(MediaForm):
 
         model = Comic
         labels = {
-            "progress": (
-                f"Progress ({config.get_unit(MediaTypes.COMIC.value, short=False)}s)"
-            ),
+            "progress": _("Progress (Issues)"),
         }
 
 
@@ -324,10 +348,7 @@ class BoardgameForm(MediaForm):
 
         model = BoardGame
         labels = {
-            "progress": (
-                "Progress "
-                f"({config.get_unit(MediaTypes.BOARDGAME.value, short=False)}s)"
-            ),
+            "progress": _("Progress (Plays)"),
         }
 
 

@@ -610,8 +610,11 @@ def get_languages(languages):
     """Return the languages for the media."""
     # when unknown spoken languages, value from response is empty list
     # e.g tv: 24795
+    # ``name`` follows TMDB_LANG; english_name is the fallback.
     if languages:
-        return [language["english_name"] for language in languages]
+        return [
+            language.get("name") or language["english_name"] for language in languages
+        ]
     return None
 
 

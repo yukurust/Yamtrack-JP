@@ -1,0 +1,2899 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Yamtrack-JP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-13 09:05+0000\n"
+"PO-Revision-Date: 2026-10-13 09:40+0000\n"
+"Last-Translator: Yamtrack-JP\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: app/forms.py:101 app/forms.py:108 app/i18n.py:179
+msgid "Select"
+msgstr "選択"
+
+#: app/forms.py:102 app/i18n.py:180 templates/app/create_entry.html:137
+msgid "Parent TV Show"
+msgstr "親のテレビ番組"
+
+#: app/forms.py:109 app/i18n.py:181 templates/app/create_entry.html:184
+msgid "Parent Season"
+msgstr "親のシーズン"
+
+#: app/forms.py:233 templates/app/create_entry.html:344
+msgid "Add any notes or comments..."
+msgstr "メモやコメントを入力"
+
+#: app/forms.py:241 app/i18n.py:174 templates/app/create_entry.html:252
+#: templates/app/media_list.html:169
+msgid "Score"
+msgstr "スコア"
+
+#: app/forms.py:242 app/i18n.py:157 templates/app/create_entry.html:79
+#: templates/app/create_entry.html:278 templates/app/media_list.html:170
+msgid "Progress"
+msgstr "進捗"
+
+#: app/forms.py:243 app/i18n.py:175 templates/app/create_entry.html:308
+#: templates/app/media_list.html:172
+msgid "Status"
+msgstr "ステータス"
+
+#: app/forms.py:244 app/i18n.py:177
+msgid "Start date"
+msgstr "開始日"
+
+#: app/forms.py:245 app/i18n.py:178
+msgid "End date"
+msgstr "終了日"
+
+#: app/forms.py:246 app/i18n.py:176 templates/app/create_entry.html:340
+msgid "Notes"
+msgstr "メモ"
+
+#: app/forms.py:275 app/i18n.py:183 templates/app/create_entry.html:76
+msgid "Progress (Chapters)"
+msgstr "進捗（話数）"
+
+#: app/forms.py:310 app/i18n.py:182
+msgid "Progress (Time Played)"
+msgstr "進捗（プレイ時間）"
+
+#: app/forms.py:327 app/i18n.py:184 templates/app/create_entry.html:78
+msgid "Progress (Pages)"
+msgstr "進捗（ページ）"
+
+#: app/forms.py:339 app/i18n.py:185
+msgid "Progress (Issues)"
+msgstr "進捗（号数）"
+
+#: app/forms.py:351 app/i18n.py:186
+msgid "Progress (Plays)"
+msgstr "進捗（プレイ回数）"
+
+#: app/helpers.py:132 app/views.py:665
+#, python-format
+msgid "%(field)s: %(error)s"
+msgstr "%(field)s: %(error)s"
+
+#: app/history_processor.py:286
+#, python-format
+msgid "Watched episode %(number)s"
+msgstr "第%(number)s話を視聴"
+
+#: app/history_processor.py:288
+#, python-format
+msgid "Updated episode %(number)s"
+msgstr "第%(number)s話を更新"
+
+#: app/history_processor.py:447
+#, python-format
+msgid "Started on %(date)s"
+msgstr "%(date)sに開始"
+
+#: app/history_processor.py:458
+#, python-format
+msgid "Finished on %(date)s"
+msgstr "%(date)sに完了"
+
+#: app/history_processor.py:496 app/history_processor.py:524
+#, python-format
+msgid "Rated %(score)s/10"
+msgstr "%(score)s/10と評価"
+
+#: app/history_processor.py:504 app/history_processor.py:538
+#, python-format
+msgid "%(field)s on %(date)s"
+msgstr "%(field)sを%(date)sに設定"
+
+#: app/history_processor.py:508
+#, python-format
+msgid "%(field)s without date"
+msgstr "%(field)s（日付なし）"
+
+#: app/history_processor.py:511 app/history_processor.py:549
+msgid "Added notes"
+msgstr "メモを追加"
+
+#: app/history_processor.py:513
+#, python-format
+msgid "Set %(field)s to %(value)s"
+msgstr "%(field)sを%(value)sに設定"
+
+#: app/history_processor.py:525
+#, python-format
+msgid "Changed rating from %(old)s to %(new)s"
+msgstr "評価を%(old)sから%(new)sに変更"
+
+#: app/history_processor.py:536
+#, python-format
+msgid "Removed %(field)s date"
+msgstr "%(field)sの日付を削除"
+
+#: app/history_processor.py:542
+#, python-format
+msgid "%(field)s date changed to %(date)s"
+msgstr "%(field)sの日付を%(date)sに変更"
+
+#: app/history_processor.py:551
+msgid "Removed notes"
+msgstr "メモを削除"
+
+#: app/history_processor.py:552
+msgid "Updated notes"
+msgstr "メモを更新"
+
+#: app/history_processor.py:555
+#, python-format
+msgid "Updated %(field)s from %(old)s to %(new)s"
+msgstr "%(field)sを%(old)sから%(new)sに更新"
+
+#: app/history_processor.py:572
+msgid "Marked as currently watching"
+msgstr "視聴中にした"
+
+#: app/history_processor.py:573
+msgid "Marked as currently reading"
+msgstr "読書中にした"
+
+#: app/history_processor.py:574
+msgid "Marked as currently playing"
+msgstr "プレイ中にした"
+
+#: app/history_processor.py:576
+#, python-format
+msgid "Marked as currently %(activity)s"
+msgstr "%(activity)s中にした"
+
+#: app/history_processor.py:579
+msgid "Marked as finished watching"
+msgstr "視聴済みにした"
+
+#: app/history_processor.py:580
+msgid "Marked as finished reading"
+msgstr "読了にした"
+
+#: app/history_processor.py:581
+msgid "Marked as finished playing"
+msgstr "プレイ済みにした"
+
+#: app/history_processor.py:583
+#, python-format
+msgid "Marked as finished %(activity)s"
+msgstr "%(activity)s済みにした"
+
+#: app/history_processor.py:586
+msgid "Added to watching list"
+msgstr "視聴予定に追加"
+
+#: app/history_processor.py:587
+msgid "Added to reading list"
+msgstr "読書予定に追加"
+
+#: app/history_processor.py:588
+msgid "Added to playing list"
+msgstr "プレイ予定に追加"
+
+#: app/history_processor.py:590
+#, python-format
+msgid "Added to %(activity)s list"
+msgstr "%(activity)s予定に追加"
+
+#: app/history_processor.py:592
+msgid "Marked as dropped"
+msgstr "中断にした"
+
+#: app/history_processor.py:595
+msgid "Marked as paused watching"
+msgstr "一時停止にした"
+
+#: app/history_processor.py:596
+msgid "Marked as paused reading"
+msgstr "読書を一時停止にした"
+
+#: app/history_processor.py:597
+msgid "Marked as paused playing"
+msgstr "プレイを一時停止にした"
+
+#: app/history_processor.py:599
+#, python-format
+msgid "Marked as paused %(activity)s"
+msgstr "%(activity)sを一時停止にした"
+
+#: app/history_processor.py:600
+#, python-format
+msgid "Changed status to %(status)s"
+msgstr "ステータスを%(status)sに変更"
+
+#: app/history_processor.py:607
+msgid "Currently watching"
+msgstr "視聴中"
+
+#: app/history_processor.py:608
+msgid "Currently reading"
+msgstr "読書中"
+
+#: app/history_processor.py:609
+msgid "Currently playing"
+msgstr "プレイ中"
+
+#: app/history_processor.py:610
+msgid "Finished watching"
+msgstr "視聴済み"
+
+#: app/history_processor.py:611
+msgid "Finished reading"
+msgstr "読了"
+
+#: app/history_processor.py:612
+msgid "Finished playing"
+msgstr "プレイ済み"
+
+#: app/history_processor.py:613
+msgid "Paused watching"
+msgstr "一時停止"
+
+#: app/history_processor.py:614
+msgid "Paused reading"
+msgstr "読書を一時停止"
+
+#: app/history_processor.py:615
+msgid "Paused playing"
+msgstr "プレイを一時停止"
+
+#: app/history_processor.py:616
+msgid "Resumed watching"
+msgstr "視聴を再開"
+
+#: app/history_processor.py:617
+msgid "Resumed reading"
+msgstr "読書を再開"
+
+#: app/history_processor.py:618
+msgid "Resumed playing"
+msgstr "プレイを再開"
+
+#: app/history_processor.py:619
+msgid "Stopped watching"
+msgstr "視聴を中断"
+
+#: app/history_processor.py:620
+msgid "Stopped reading"
+msgstr "読書を中断"
+
+#: app/history_processor.py:621
+msgid "Stopped playing"
+msgstr "プレイを中断"
+
+#: app/history_processor.py:626
+#, python-format
+msgid "Changed status from %(old)s to %(new)s"
+msgstr "ステータスを%(old)sから%(new)sに変更"
+
+#: app/history_processor.py:635
+#, python-format
+msgid "Played for %(time)s"
+msgstr "%(time)sプレイした"
+
+#: app/history_processor.py:639
+#, python-format
+msgid "Read up to page %(number)s"
+msgstr "%(number)sページまで読んだ"
+
+#: app/history_processor.py:641
+#, python-format
+msgid "Read up to chapter %(number)s"
+msgstr "%(number)s話まで読んだ"
+
+#: app/history_processor.py:643
+#, python-format
+msgid "Watched up to episode %(number)s"
+msgstr "第%(number)s話まで視聴"
+
+#: app/history_processor.py:644
+#, python-format
+msgid "%(verb)s up to %(unit)s %(number)s"
+msgstr "%(unit)s %(number)sまで%(verb)s"
+
+#: app/history_processor.py:658
+#, python-format
+msgid "Added %(time)s of playtime"
+msgstr "プレイ時間を%(time)s追加"
+
+#: app/history_processor.py:659
+#, python-format
+msgid "Removed %(time)s of playtime"
+msgstr "プレイ時間を%(time)s減らした"
+
+#: app/history_processor.py:662
+#, python-format
+msgid "Progress set to %(number)s %(unit)s"
+msgstr "進捗を%(number)s%(unit)sに更新"
+
+#: app/i18n.py:12
+msgid "Completed"
+msgstr "視聴済み"
+
+#: app/i18n.py:13 app/i18n.py:14 templates/app/statistics.html:116
+msgid "In Progress"
+msgstr "視聴中"
+
+#: app/i18n.py:15
+msgid "Planning"
+msgstr "視聴予定"
+
+#: app/i18n.py:16
+msgid "Paused"
+msgstr "一時停止"
+
+#: app/i18n.py:17
+msgid "Dropped"
+msgstr "中断"
+
+#: app/i18n.py:18 templates/lists/list_detail.html:167
+msgid "All"
+msgstr "すべて"
+
+#: app/i18n.py:22
+msgid "TV Show"
+msgstr "テレビ番組"
+
+#: app/i18n.py:23
+msgid "TV Season"
+msgstr "シーズン"
+
+#: app/i18n.py:24 app/i18n.py:48 templates/app/media_details.html:581
+msgid "Episode"
+msgstr "エピソード"
+
+#: app/i18n.py:25 app/i18n.py:127
+msgid "Movie"
+msgstr "映画"
+
+#: app/i18n.py:26 app/i18n.py:39
+msgid "Anime"
+msgstr "アニメ"
+
+#: app/i18n.py:27 app/i18n.py:40
+msgid "Manga"
+msgstr "マンガ"
+
+#: app/i18n.py:28
+msgid "Game"
+msgstr "ゲーム"
+
+#: app/i18n.py:29
+msgid "Book"
+msgstr "本"
+
+#: app/i18n.py:30
+msgid "Comic"
+msgstr "コミック"
+
+#: app/i18n.py:31
+msgid "Boardgame"
+msgstr "ボードゲーム"
+
+#: app/i18n.py:35
+msgid "TV Shows"
+msgstr "テレビ番組"
+
+#: app/i18n.py:36
+msgid "TV Seasons"
+msgstr "シーズン"
+
+#: app/i18n.py:37 templates/app/components/media_section_tabs.html:48
+#: templates/app/media_details.html:561
+msgid "Episodes"
+msgstr "エピソード"
+
+#: app/i18n.py:38
+msgid "Movies"
+msgstr "映画"
+
+#: app/i18n.py:41
+msgid "Games"
+msgstr "ゲーム"
+
+#: app/i18n.py:42
+msgid "Books"
+msgstr "本"
+
+#: app/i18n.py:43
+msgid "Comics"
+msgstr "コミック"
+
+#: app/i18n.py:44
+msgid "Boardgames"
+msgstr "ボードゲーム"
+
+#: app/i18n.py:49
+msgid "Chapter"
+msgstr "話"
+
+#: app/i18n.py:50
+msgid "Page"
+msgstr "ページ"
+
+#: app/i18n.py:51
+msgid "Issue"
+msgstr "号"
+
+#: app/i18n.py:52
+msgid "Play"
+msgstr "プレイ"
+
+#: app/i18n.py:53
+msgid "episode"
+msgstr "話"
+
+#: app/i18n.py:54 app/i18n.py:73
+msgid "episodes"
+msgstr "話"
+
+#: app/i18n.py:55
+msgid "chapter"
+msgstr "話"
+
+#: app/i18n.py:56
+msgid "chapters"
+msgstr "話"
+
+#: app/i18n.py:57
+msgid "page"
+msgstr "ページ"
+
+#: app/i18n.py:58
+msgid "pages"
+msgstr "ページ"
+
+#: app/i18n.py:59
+msgid "issue"
+msgstr "号"
+
+#: app/i18n.py:60
+msgid "issues"
+msgstr "号"
+
+#: app/i18n.py:61
+msgid "play"
+msgstr "プレイ"
+
+#: app/i18n.py:62
+msgid "plays"
+msgstr "プレイ"
+
+#: app/i18n.py:63
+msgid "hour"
+msgstr "時間"
+
+#: app/i18n.py:64
+msgid "hours"
+msgstr "時間"
+
+#: app/i18n.py:65
+msgid "E"
+msgstr "話"
+
+#: app/i18n.py:69
+msgid "format"
+msgstr "形式"
+
+#: app/i18n.py:70
+msgid "start date"
+msgstr "開始日"
+
+#: app/i18n.py:71
+msgid "end date"
+msgstr "終了日"
+
+#: app/i18n.py:72
+msgid "status"
+msgstr "ステータス"
+
+#: app/i18n.py:74
+msgid "runtime"
+msgstr "収録時間"
+
+#: app/i18n.py:75
+msgid "studios"
+msgstr "スタジオ"
+
+#: app/i18n.py:76
+msgid "season"
+msgstr "シーズン"
+
+#: app/i18n.py:77
+msgid "broadcast"
+msgstr "放送"
+
+#: app/i18n.py:78
+msgid "source"
+msgstr "原作"
+
+#: app/i18n.py:79
+msgid "number of chapters"
+msgstr "話数"
+
+#: app/i18n.py:80
+msgid "release date"
+msgstr "公開日"
+
+#: app/i18n.py:81
+msgid "country"
+msgstr "国"
+
+#: app/i18n.py:82
+msgid "languages"
+msgstr "言語"
+
+#: app/i18n.py:83
+msgid "first air date"
+msgstr "放送開始日"
+
+#: app/i18n.py:84
+msgid "last air date"
+msgstr "最終放送日"
+
+#: app/i18n.py:85
+msgid "seasons"
+msgstr "シーズン数"
+
+#: app/i18n.py:86
+msgid "themes"
+msgstr "テーマ"
+
+#: app/i18n.py:87
+msgid "platforms"
+msgstr "プラットフォーム"
+
+#: app/i18n.py:88
+msgid "companies"
+msgstr "制作会社"
+
+#: app/i18n.py:89
+msgid "physical format"
+msgstr "物理形式"
+
+#: app/i18n.py:90
+msgid "number of pages"
+msgstr "ページ数"
+
+#: app/i18n.py:91
+msgid "publish date"
+msgstr "出版日"
+
+#: app/i18n.py:92
+msgid "author"
+msgstr "著者"
+
+#: app/i18n.py:93
+msgid "publishers"
+msgstr "出版社"
+
+#: app/i18n.py:94
+msgid "isbn"
+msgstr "ISBN"
+
+#: app/i18n.py:95
+msgid "authors"
+msgstr "著者"
+
+#: app/i18n.py:96
+msgid "year"
+msgstr "年"
+
+#: app/i18n.py:97
+msgid "status in country of origin"
+msgstr "原産国での状態"
+
+#: app/i18n.py:98
+msgid "latest chapter translated"
+msgstr "最新の翻訳話"
+
+#: app/i18n.py:99
+msgid "publisher"
+msgstr "出版社"
+
+#: app/i18n.py:100
+msgid "issues count"
+msgstr "発行数"
+
+#: app/i18n.py:101
+msgid "last issue name"
+msgstr "最新号の名前"
+
+#: app/i18n.py:102
+msgid "last issue number"
+msgstr "最新号の番号"
+
+#: app/i18n.py:103
+msgid "people"
+msgstr "人数"
+
+#: app/i18n.py:104
+msgid "last updated"
+msgstr "最終更新"
+
+#: app/i18n.py:105
+msgid "players"
+msgstr "プレイ人数"
+
+#: app/i18n.py:106
+msgid "playtime"
+msgstr "プレイ時間"
+
+#: app/i18n.py:107
+msgid "min age"
+msgstr "対象年齢"
+
+#: app/i18n.py:108
+msgid "designers"
+msgstr "デザイナー"
+
+#: app/i18n.py:112 templates/users/import_data.html:484
+msgid "Finished"
+msgstr "放送終了"
+
+#: app/i18n.py:113
+msgid "Airing"
+msgstr "放送中"
+
+#: app/i18n.py:114 app/i18n.py:151
+msgid "Upcoming"
+msgstr "未放送"
+
+#: app/i18n.py:115
+msgid "Publishing"
+msgstr "連載中"
+
+#: app/i18n.py:116
+msgid "On Hiatus"
+msgstr "休載"
+
+#: app/i18n.py:117
+msgid "Discontinued"
+msgstr "打ち切り"
+
+#: app/i18n.py:118
+msgid "Released"
+msgstr "公開済み"
+
+#: app/i18n.py:119
+msgid "Ended"
+msgstr "終了"
+
+#: app/i18n.py:120
+msgid "Returning Series"
+msgstr "継続中"
+
+#: app/i18n.py:121
+msgid "In Production"
+msgstr "制作中"
+
+#: app/i18n.py:122
+msgid "Post Production"
+msgstr "ポストプロダクション"
+
+#: app/i18n.py:123
+msgid "Planned"
+msgstr "計画中"
+
+#: app/i18n.py:124
+msgid "Rumored"
+msgstr "噂"
+
+#: app/i18n.py:125
+msgid "Canceled"
+msgstr "中止"
+
+#: app/i18n.py:126
+msgid "Pilot"
+msgstr "パイロット"
+
+#: app/i18n.py:128
+msgid "TV"
+msgstr "TV"
+
+#: app/i18n.py:129
+msgid "Unknown"
+msgstr "不明"
+
+#: app/i18n.py:130
+msgid "Unknown air date"
+msgstr "放送日不明"
+
+#: app/i18n.py:131
+msgid "No synopsis available."
+msgstr "あらすじはありません。"
+
+#: app/i18n.py:135
+msgid "Related Anime"
+msgstr "関連アニメ"
+
+#: app/i18n.py:136
+msgid "Related Manga"
+msgstr "関連マンガ"
+
+#: app/i18n.py:137
+msgid "Recommendations"
+msgstr "おすすめ"
+
+#: app/i18n.py:138
+msgid "Seasons"
+msgstr "シーズン"
+
+#: app/i18n.py:139
+msgid "Collection"
+msgstr "コレクション"
+
+#: app/i18n.py:140 templates/app/components/media_section_tabs.html:27
+#: templates/app/media_details.html:452
+msgid "DLCs"
+msgstr "DLC"
+
+#: app/i18n.py:141
+msgid "Parent Game"
+msgstr "親ゲーム"
+
+#: app/i18n.py:142
+msgid "Remasters"
+msgstr "リマスター"
+
+#: app/i18n.py:143
+msgid "Remakes"
+msgstr "リメイク"
+
+#: app/i18n.py:144
+msgid "Expansions"
+msgstr "拡張"
+
+#: app/i18n.py:145
+msgid "Standalone Expansions"
+msgstr "単体拡張"
+
+#: app/i18n.py:146
+msgid "Expanded Games"
+msgstr "拡張版"
+
+#: app/i18n.py:147
+msgid "Other Editions"
+msgstr "その他のエディション"
+
+#: app/i18n.py:152
+msgid "Recent"
+msgstr "最近"
+
+#: app/i18n.py:153
+msgid "Completion"
+msgstr "完了日"
+
+#: app/i18n.py:154
+msgid "Episodes Left"
+msgstr "残り話数"
+
+#: app/i18n.py:155 templates/app/create_entry.html:127
+#: templates/app/media_list.html:168
+msgid "Title"
+msgstr "タイトル"
+
+#: app/i18n.py:156
+msgid "Rating"
+msgstr "評価"
+
+#: app/i18n.py:158 templates/app/create_entry.html:322
+#: templates/app/journal.html:63 templates/app/media_list.html:173
+#: templates/app/statistics.html:62
+msgid "Start Date"
+msgstr "開始日"
+
+#: app/i18n.py:159 templates/app/create_entry.html:331
+#: templates/app/journal.html:70 templates/app/media_list.html:174
+#: templates/app/statistics.html:69
+msgid "End Date"
+msgstr "終了日"
+
+#: app/i18n.py:160
+msgid "Last Item Added"
+msgstr "最終追加"
+
+#: app/i18n.py:161
+msgid "Name"
+msgstr "名前"
+
+#: app/i18n.py:162
+msgid "Items Count"
+msgstr "件数"
+
+#: app/i18n.py:163
+msgid "Newest First"
+msgstr "新しい順"
+
+#: app/i18n.py:164
+msgid "Date Added"
+msgstr "追加日"
+
+#: app/i18n.py:165 templates/app/create_entry.html:111
+msgid "Media Type"
+msgstr "メディア種別"
+
+#: app/i18n.py:166
+msgid "Current Date"
+msgstr "今日の日付"
+
+#: app/i18n.py:167
+msgid "Release Date"
+msgstr "公開日"
+
+#: app/i18n.py:168
+msgid "No Date"
+msgstr "日付なし"
+
+#: app/i18n.py:169
+msgid "Monday"
+msgstr "月曜日"
+
+#: app/i18n.py:170
+msgid "Sunday"
+msgstr "日曜日"
+
+#: app/i18n.py:171
+msgid "Grid"
+msgstr "グリッド"
+
+#: app/i18n.py:172
+msgid "Table"
+msgstr "表"
+
+#: app/i18n.py:173
+msgid "List"
+msgstr "リスト"
+
+#: app/i18n.py:187
+msgid "2026-01-18 (ISO)"
+msgstr "2026-01-18（ISO）"
+
+#: app/i18n.py:188
+msgid "18/01/2026 (EU)"
+msgstr "18/01/2026（ヨーロッパ）"
+
+#: app/i18n.py:189
+msgid "01/18/2026 (US)"
+msgstr "01/18/2026（アメリカ）"
+
+#: app/i18n.py:190
+msgid "Jan 18, 2026"
+msgstr "Jan 18, 2026"
+
+#: app/i18n.py:191
+msgid "18 Jan, 2026"
+msgstr "18 Jan, 2026"
+
+#: app/i18n.py:192
+msgid "2026年1月18日"
+msgstr "2026年1月18日"
+
+#: app/i18n.py:193
+msgid "14:30 (24-hour)"
+msgstr "14:30（24時間）"
+
+#: app/i18n.py:194
+msgid "2:30 PM (12-hour)"
+msgstr "2:30 PM（12時間）"
+
+#: app/i18n.py:198
+msgid "Movies watched"
+msgstr "映画を視聴"
+
+#: app/i18n.py:199
+msgid "Movie watched"
+msgstr "映画を視聴"
+
+#: app/i18n.py:200
+msgid "Anime episodes watched"
+msgstr "アニメを視聴（話数）"
+
+#: app/i18n.py:201
+msgid "Anime episode watched"
+msgstr "アニメを視聴（話数）"
+
+#: app/i18n.py:202
+msgid "TV episodes watched"
+msgstr "テレビを視聴（話数）"
+
+#: app/i18n.py:203
+msgid "TV episode watched"
+msgstr "テレビを視聴（話数）"
+
+#: app/i18n.py:204
+msgid "Manga chapters read"
+msgstr "マンガを読んだ（話数）"
+
+#: app/i18n.py:205
+msgid "Manga chapter read"
+msgstr "マンガを読んだ（話数）"
+
+#: app/i18n.py:206
+msgid "Book pages read"
+msgstr "本を読んだ（ページ）"
+
+#: app/i18n.py:207
+msgid "Book page read"
+msgstr "本を読んだ（ページ）"
+
+#: app/i18n.py:208
+msgid "Comic issues read"
+msgstr "コミックを読んだ（号）"
+
+#: app/i18n.py:209
+msgid "Comic issue read"
+msgstr "コミックを読んだ（号）"
+
+#: app/i18n.py:210
+msgid "Boardgame plays"
+msgstr "ボードゲームをプレイ"
+
+#: app/i18n.py:211
+msgid "Boardgame play"
+msgstr "ボードゲームをプレイ"
+
+#: app/i18n.py:212
+msgid "Game hours played"
+msgstr "ゲームをプレイ（時間）"
+
+#: app/i18n.py:213
+msgid "Game hour played"
+msgstr "ゲームをプレイ（時間）"
+
+#: app/templatetags/app_tags.py:328
+#, python-format
+msgid "Today %(time)s"
+msgstr "今日 %(time)s"
+
+#: app/templatetags/app_tags.py:330
+#, python-format
+msgid "Tomorrow %(time)s"
+msgstr "明日 %(time)s"
+
+#: app/views.py:447
+msgid "Manual items cannot be synced."
+msgstr "手動で追加した作品は同期できません。"
+
+#: app/views.py:463
+msgid "The data was recently synced, please wait a few seconds."
+msgstr "直前に同期したばかりです。数秒待ってからもう一度試してください。"
+
+#: app/views.py:539
+#, python-format
+msgid "%(title)s was synced to %(source)s successfully."
+msgstr "%(title)sを%(source)sと同期しました。"
+
+#: app/views.py:790
+#, python-format
+msgid "%(name)s already exists in the database."
+msgstr "%(name)sはすでに登録されています。"
+
+#: app/views.py:822
+#, python-format
+msgid "%(item)s added successfully."
+msgstr "%(item)sを追加しました。"
+
+#: events/views.py:114
+msgid "The task to refresh upcoming releases has been queued."
+msgstr "今後の公開情報を更新する処理を予約しました。"
+
+#: integrations/imports/helpers.py:390
+msgid "Invalid import time."
+msgstr "インポート時刻が正しくありません。"
+
+#: integrations/imports/helpers.py:395
+msgid "The same import task is already scheduled."
+msgstr "同じインポートはすでに予約されています。"
+
+#: integrations/imports/helpers.py:424
+#, python-format
+msgid "%(source)s import task scheduled."
+msgstr "%(source)sのインポートを予約しました。"
+
+#: integrations/views.py:65
+msgid "Invalid or expired Trakt authorization request."
+msgstr "Traktの認証要求が無効か、期限切れです。"
+
+#: integrations/views.py:69
+msgid "Trakt authorization failed."
+msgstr "Traktの認証に失敗しました。"
+
+#: integrations/views.py:91 integrations/views.py:124
+msgid "The task to import media from Trakt has been queued."
+msgstr "Traktからのインポートを予約しました。"
+
+#: integrations/views.py:111
+msgid "Trakt username is required."
+msgstr "Traktのユーザー名が必要です。"
+
+#: integrations/views.py:143
+msgid "Trakt export zip file is required."
+msgstr "TraktのエクスポートZIPファイルが必要です。"
+
+#: integrations/views.py:152
+msgid "The task to import media from Trakt export file has been queued."
+msgstr "Traktのエクスポートファイルからのインポートを予約しました。"
+
+#: integrations/views.py:200
+msgid "The task to import media from Simkl has been queued."
+msgstr "Simklからのインポートを予約しました。"
+
+#: integrations/views.py:220
+msgid "MyAnimeList username is required."
+msgstr "MyAnimeListのユーザー名が必要です。"
+
+#: integrations/views.py:228
+msgid "The task to import media from MyAnimeList has been queued."
+msgstr "MyAnimeListからのインポートを予約しました。"
+
+#: integrations/views.py:282 integrations/views.py:315
+msgid "AniList username is required."
+msgstr "AniListのユーザー名が必要です。"
+
+#: integrations/views.py:296 integrations/views.py:328
+msgid "AniList import queued."
+msgstr "AniListからのインポートを予約しました。"
+
+#: integrations/views.py:346
+msgid "Kitsu user ID is required."
+msgstr "KitsuのユーザーIDが必要です。"
+
+#: integrations/views.py:354
+msgid "The task to import media from Kitsu has been queued."
+msgstr "Kitsuからのインポートを予約しました。"
+
+#: integrations/views.py:374
+msgid "Yamtrack CSV file is required."
+msgstr "YamtrackのCSVファイルが必要です。"
+
+#: integrations/views.py:383
+msgid "The task to import media from Yamtrack CSV file has been queued."
+msgstr "YamtrackのCSVからのインポートを予約しました。"
+
+#: integrations/views.py:393
+msgid "HowLongToBeat CSV file is required."
+msgstr "HowLongToBeatのCSVファイルが必要です。"
+
+#: integrations/views.py:402
+msgid "The task to import media from HowLongToBeat CSV file has been queued."
+msgstr "HowLongToBeatのCSVからのインポートを予約しました。"
+
+#: integrations/views.py:411
+msgid "Steam ID is required."
+msgstr "Steam IDが必要です。"
+
+#: integrations/views.py:419
+msgid "The task to import media from Steam has been queued."
+msgstr "Steamからのインポートを予約しました。"
+
+#: integrations/views.py:438
+msgid "IMDB CSV file is required."
+msgstr "IMDBのCSVファイルが必要です。"
+
+#: integrations/views.py:447
+msgid "The task to import media from IMDB CSV file has been queued."
+msgstr "IMDBのCSVからのインポートを予約しました。"
+
+#: integrations/views.py:457
+msgid "GoodReads CSV file is required."
+msgstr "GoodreadsのCSVファイルが必要です。"
+
+#: integrations/views.py:466
+msgid "The task to import media from GoodReads CSV file has been queued."
+msgstr "GoodreadsのCSVからのインポートを予約しました。"
+
+#: lists/forms.py:26
+msgid "Search users to add..."
+msgstr "追加するユーザーを検索"
+
+#: lists/views.py:234
+msgid "You do not have permission to edit this list."
+msgstr "このリストを編集する権限がありません。"
+
+#: lists/views.py:248
+msgid "You do not have permission to delete this list."
+msgstr "このリストを削除する権限がありません。"
+
+#: templates/400.html:6 templates/403.html:6 templates/403_csrf.html:6
+msgid "Forbidden - Yamtrack"
+msgstr "アクセス拒否 - Yamtrack"
+
+#: templates/400.html:14
+msgid "Bad Request"
+msgstr "不正なリクエスト"
+
+#: templates/400.html:16
+msgid ""
+"The server could not understand the request due to invalid syntax or missing "
+"parameters."
+msgstr "リクエストの形式が正しくないか、必要な情報が足りないため処理できませんでした。"
+
+#: templates/400.html:19 templates/403.html:20 templates/403_csrf.html:29
+#: templates/404.html:17 templates/500.html:23
+msgid "If you believe this was a bug, please"
+msgstr "不具合だと思われる場合は"
+
+#: templates/400.html:20 templates/403.html:21 templates/403_csrf.html:30
+#: templates/404.html:18 templates/500.html:24
+msgid "report the issue."
+msgstr "報告してください。"
+
+#: templates/400.html:27 templates/403.html:33 templates/403_csrf.html:42
+#: templates/404.html:25 templates/500.html:36
+#: templates/socialaccount/connections.html:95
+msgid "Back to Home"
+msgstr "ホームに戻る"
+
+#: templates/403.html:14 templates/403_csrf.html:14
+msgid "Access Forbidden"
+msgstr "アクセスが拒否されました"
+
+#: templates/403.html:16 templates/403_csrf.html:16
+msgid ""
+"You don't have permission to access this resource. Please log in or contact "
+"an administrator."
+msgstr "このページを見る権限がありません。ログインするか、管理者に問い合わせてください。"
+
+#: templates/403.html:28 templates/403_csrf.html:37
+msgid "Log In"
+msgstr "ログイン"
+
+#: templates/403_csrf.html:19
+msgid "Using a Reverse Proxy?"
+msgstr "リバースプロキシを使っていますか？"
+
+#: templates/403_csrf.html:21
+msgid ""
+"If you're accessing YamTrack through a reverse proxy, you need to set the"
+msgstr "リバースプロキシ経由でYamtrackを開いている場合は、"
+
+#: templates/403_csrf.html:21
+msgid "environment variable to your application URL."
+msgstr "環境変数にアプリのURLを設定してください。"
+
+#: templates/403_csrf.html:25
+msgid "For example,"
+msgstr "例:"
+
+#: templates/404.html:6
+msgid "Page not found - Yamtrack"
+msgstr "ページが見つかりません - Yamtrack"
+
+#: templates/404.html:14
+msgid "Page Not Found"
+msgstr "ページが見つかりません"
+
+#: templates/404.html:15
+msgid "The page you are looking for doesn't exist or has been moved."
+msgstr "お探しのページは存在しないか、移動しました。"
+
+#: templates/500.html:6
+msgid "Server Error - Yamtrack"
+msgstr "サーバーエラー - Yamtrack"
+
+#: templates/500.html:14
+msgid "Something Went Wrong"
+msgstr "問題が発生しました"
+
+#: templates/500.html:19
+msgid "We're sorry, but there was an error processing your request."
+msgstr "リクエストの処理中にエラーが発生しました。"
+
+#: templates/500.html:31
+msgid "Try Again"
+msgstr "もう一度試す"
+
+#: templates/account/login.html:7
+msgid "Login"
+msgstr "ログイン"
+
+#: templates/account/login.html:11
+msgid "Sign in to your account"
+msgstr "アカウントにサインイン"
+
+#: templates/account/login.html:28 templates/app/media_list.html:243
+msgid "Sign In"
+msgstr "サインイン"
+
+#: templates/account/login.html:41
+msgid "Need an account?"
+msgstr "アカウントをお持ちでないですか？"
+
+#: templates/account/login.html:43
+msgid "Register now"
+msgstr "新規登録"
+
+#: templates/account/signup.html:6
+msgid "Register"
+msgstr "新規登録"
+
+#: templates/account/signup.html:10
+msgid "Create your account"
+msgstr "アカウントを作成"
+
+#: templates/account/signup.html:26
+msgid "Create Account"
+msgstr "アカウントを作成"
+
+#: templates/account/signup.html:38
+msgid "Already have an account?"
+msgstr "すでにアカウントをお持ちですか？"
+
+#: templates/account/signup.html:40
+msgid "Sign in"
+msgstr "サインイン"
+
+#: templates/allauth/elements/hr.html:4
+msgid "Or continue with"
+msgstr "または次の方法で続ける"
+
+#: templates/app/components/fill_history.html:6 templates/app/journal.html:145
+msgid "Activity History"
+msgstr "活動履歴"
+
+#: templates/app/components/fill_history.html:29
+msgid "You haven't started tracking it yet."
+msgstr "まだ記録していません。"
+
+#: templates/app/components/fill_track.html:75
+msgid "Update"
+msgstr "更新"
+
+#: templates/app/components/fill_track.html:77
+#: templates/lists/components/list_item_button.html:16
+msgid "Add"
+msgstr "追加"
+
+#: templates/app/components/fill_track.html:85
+#: templates/app/components/fill_track_episode.html:62
+#: templates/app/components/journal_items.html:73
+#: templates/lists/components/list_form.html:46
+msgid "Delete"
+msgstr "削除"
+
+#: templates/app/components/fill_track_episode.html:14
+#: templates/app/media_details.html:589
+msgid "Track Episode"
+msgstr "エピソードを記録"
+
+#: templates/app/components/fill_track_episode.html:30
+msgid "Watched once"
+msgstr "1回視聴"
+
+#: templates/app/components/fill_track_episode.html:35
+msgid "Not watched yet"
+msgstr "未視聴"
+
+#: templates/app/components/fill_track_episode.html:44
+msgid "Previous Watches"
+msgstr "過去の視聴"
+
+#: templates/app/components/fill_track_episode.html:52
+#: templates/app/media_details.html:658
+msgid "No date provided"
+msgstr "日付なし"
+
+#: templates/app/components/fill_track_episode.html:96
+msgid "Watch Date"
+msgstr "視聴日"
+
+#: templates/app/components/fill_track_episode.html:117
+msgid "Add watched entry with current settings"
+msgstr "現在の設定で視聴記録を追加"
+
+#: templates/app/components/fill_track_episode.html:117
+msgid "Add watch"
+msgstr "視聴を追加"
+
+#: templates/app/components/fill_track_episode.html:143
+msgid "Fills in the current date and time"
+msgstr "現在の日時を入力します"
+
+#: templates/app/components/fill_track_episode.html:143
+msgid "Fill in current time"
+msgstr "現在時刻を入力"
+
+#: templates/app/components/fill_track_episode.html:150
+msgid "Fills in the date and time the episode will be finished if started now"
+msgstr "今から見始めた場合の終了日時を入力します"
+
+#: templates/app/components/fill_track_episode.html:151
+msgid "Fill in end time"
+msgstr "終了時刻を入力"
+
+#: templates/app/components/fill_track_episode.html:160
+msgid "Fills in the air date of the episode, if available"
+msgstr "放送日が分かる場合は、その日付を入力します"
+
+#: templates/app/components/fill_track_episode.html:160
+msgid "Fill in air date"
+msgstr "放送日を入力"
+
+#: templates/app/components/fill_track_episode.html:167
+msgid "Clears the watch date and time"
+msgstr "視聴日時を消します"
+
+#: templates/app/components/fill_track_episode.html:167
+msgid "Fill in no date"
+msgstr "日付を空にする"
+
+#: templates/app/components/home_grid.html:40
+#: templates/app/components/media_card.html:72
+#: templates/app/components/media_card_list.html:47
+#: templates/app/media_details.html:37
+msgid "Add to tracker"
+msgstr "記録に追加"
+
+#: templates/app/components/home_grid.html:48
+#: templates/app/components/media_card.html:82
+#: templates/app/components/media_card_list.html:56
+#: templates/app/media_details.html:309 templates/app/media_details.html:605
+msgid "Add to custom lists"
+msgstr "カスタムリストに追加"
+
+#: templates/app/components/home_grid.html:56
+#: templates/app/components/media_card.html:91
+#: templates/app/components/media_card_list.html:65
+#: templates/app/media_details.html:334 templates/app/media_details.html:627
+msgid "View your activity history"
+msgstr "活動履歴を見る"
+
+#: templates/app/components/home_section.html:83
+msgid "Nothing is actively moving right now"
+msgstr "いま進行中の作品はありません"
+
+#: templates/app/components/home_section.html:85
+msgid "Your planning shelf is still empty"
+msgstr "視聴予定はまだ空です"
+
+#: templates/app/components/home_section.html:90
+msgid ""
+"Start a title and mark it as in progress to see quick updates and release "
+"reminders here."
+msgstr "作品を視聴中にすると、更新や公開予定がここに表示されます。"
+
+#: templates/app/components/home_section.html:92
+msgid "Add a few titles to planning to see them here."
+msgstr "視聴予定に作品を追加すると、ここに表示されます。"
+
+#: templates/app/components/home_section.html:99
+msgid "Browse media"
+msgstr "作品を探す"
+
+#: templates/app/components/journal_items.html:30
+msgid "Delete activity"
+msgstr "活動を削除"
+
+#: templates/app/components/journal_items.html:51
+msgid "Delete activity?"
+msgstr "活動を削除しますか？"
+
+#: templates/app/components/journal_items.html:53
+msgid "This removes"
+msgstr "次の記録を削除します:"
+
+#: templates/app/components/journal_items.html:58
+#, python-format
+msgid "for %(item)s from your history. This can't be undone."
+msgstr "対象は%(item)sです。この操作は取り消せません。"
+
+#: templates/app/components/journal_items.html:64 templates/app/journal.html:81
+#: templates/app/statistics.html:80
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: templates/app/components/media_section_tabs.html:9
+msgid "Overview"
+msgstr "概要"
+
+#: templates/app/components/media_section_tabs.html:16
+#: templates/app/media_details.html:424
+msgid "Cast"
+msgstr "キャスト"
+
+#: templates/app/components/media_section_tabs.html:40
+msgid "Repeats"
+msgstr "再視聴"
+
+#: templates/app/components/media_section_tabs.html:57
+#: templates/app/media_details.html:675
+msgid "Streaming"
+msgstr "配信"
+
+#: templates/app/components/media_section_tabs.html:66
+#: templates/app/media_details.html:702
+msgid "Time to Beat"
+msgstr "クリア時間"
+
+#: templates/app/create_entry.html:6
+msgid "Create - Yamtrack"
+msgstr "作成 - Yamtrack"
+
+#: templates/app/create_entry.html:12
+msgid "Create Custom Entry"
+msgstr "カスタム作品を作成"
+
+#: templates/app/create_entry.html:13
+msgid ""
+"Add a custom media entry to your collection if it's not available in the "
+"database."
+msgstr "データベースにない作品を、自分で追加できます。"
+
+#: templates/app/create_entry.html:75
+msgid "Progress (Episodes)"
+msgstr "進捗（話数）"
+
+#: templates/app/create_entry.html:77
+msgid "Progress (Play Time)"
+msgstr "進捗（プレイ時間）"
+
+#: templates/app/create_entry.html:87
+msgid "Please select a parent TV show from the dropdown"
+msgstr "一覧から親のテレビ番組を選んでください"
+
+#: templates/app/create_entry.html:96
+msgid "Please select a parent Season from the dropdown"
+msgstr "一覧から親のシーズンを選んでください"
+
+#: templates/app/create_entry.html:129
+msgid "Enter title"
+msgstr "タイトルを入力"
+
+#: templates/app/create_entry.html:142
+msgid "Search for a TV show..."
+msgstr "テレビ番組を検索"
+
+#: templates/app/create_entry.html:159
+msgid "Season Number"
+msgstr "シーズン番号"
+
+#: templates/app/create_entry.html:189
+msgid "Search for a season..."
+msgstr "シーズンを検索"
+
+#: templates/app/create_entry.html:206
+msgid "Episode Number"
+msgstr "エピソード番号"
+
+#: templates/app/create_entry.html:231
+msgid "Image URL"
+msgstr "画像URL"
+
+#: templates/app/create_entry.html:236
+msgid "Enter image URL"
+msgstr "画像URLを入力"
+
+#: templates/app/create_entry.html:351
+msgid "Create Entry"
+msgstr "作品を作成"
+
+#: templates/app/home.html:6
+msgid "Home - Yamtrack"
+msgstr "ホーム - Yamtrack"
+
+#: templates/app/home.html:12 templates/base.html:87
+msgid "Home"
+msgstr "ホーム"
+
+#: templates/app/home.html:17
+msgid "Hide unreleased"
+msgstr "未公開を隠す"
+
+#: templates/app/journal.html:7
+msgid "Journal - Yamtrack"
+msgstr "ジャーナル - Yamtrack"
+
+#: templates/app/journal.html:12 templates/base.html:159
+msgid "Journal"
+msgstr "ジャーナル"
+
+#: templates/app/journal.html:13
+msgid "A feed of everything you've done in Yamtrack"
+msgstr "Yamtrackでの記録が時系列で並びます"
+
+#: templates/app/journal.html:37 templates/app/statistics.html:36
+msgid "Predefined Ranges"
+msgstr "期間のプリセット"
+
+#: templates/app/journal.html:40 templates/app/statistics.html:39
+msgid "Custom Range"
+msgstr "期間を指定"
+
+#: templates/app/journal.html:86 templates/app/statistics.html:85
+msgid "Apply Range"
+msgstr "期間を適用"
+
+#: templates/app/journal.html:101
+msgid "Tracked Activities"
+msgstr "記録した活動"
+
+#: templates/app/journal.html:114
+msgid "Most Active Day"
+msgstr "いちばん活動した日"
+
+#: templates/app/journal.html:128
+msgid "Current Streak"
+msgstr "連続日数"
+
+#: templates/app/journal.html:190
+msgid "Less"
+msgstr "少なく"
+
+#: templates/app/journal.html:196
+msgid "More"
+msgstr "多く"
+
+#: templates/app/journal.html:214
+msgid "No tracking activity in this date range."
+msgstr "この期間の記録はありません。"
+
+#: templates/app/media_details.html:6
+msgid "Show less"
+msgstr "折りたたむ"
+
+#: templates/app/media_details.html:7
+msgid "Read more"
+msgstr "続きを読む"
+
+#: templates/app/media_details.html:44
+msgid "More tracking options"
+msgstr "その他の記録"
+
+#: templates/app/media_details.html:65
+msgid "Add new entry"
+msgstr "新しい記録を追加"
+
+#: templates/app/media_details.html:182
+#, python-format
+msgid "%(votes)s vote"
+msgid_plural "%(votes)s votes"
+msgstr[0] "%(votes)s件"
+
+#: templates/app/media_details.html:194
+msgid "YOUR SCORE"
+msgstr "あなたのスコア"
+
+#: templates/app/media_details.html:207
+msgid "Click to edit"
+msgstr "クリックして編集"
+
+#: templates/app/media_details.html:252
+msgid "Your History"
+msgstr "あなたの履歴"
+
+#: templates/app/media_details.html:258
+msgid "Started:"
+msgstr "開始:"
+
+#: templates/app/media_details.html:265
+msgid "Ended:"
+msgstr "終了:"
+
+#: templates/app/media_details.html:272
+msgid "Progress:"
+msgstr "進捗:"
+
+#: templates/app/media_details.html:288
+msgid "Your notes"
+msgstr "メモ"
+
+#: templates/app/media_details.html:304
+msgid "Actions"
+msgstr "操作"
+
+#: templates/app/media_details.html:318
+msgid "Add to lists"
+msgstr "リストに追加"
+
+#: templates/app/media_details.html:343
+msgid "Activity history"
+msgstr "活動履歴"
+
+#: templates/app/media_details.html:358
+msgid "Sync metadata with provider"
+msgstr "提供元とメタデータを同期"
+
+#: templates/app/media_details.html:373
+msgid "Sync metadata"
+msgstr "メタデータを同期"
+
+#: templates/app/media_details.html:378
+msgid "Details"
+msgstr "詳細"
+
+#: templates/app/media_details.html:394
+msgid "Provider"
+msgstr "提供元"
+
+#: templates/app/media_details.html:401 templates/users/about.html:29
+msgid "Links"
+msgstr "リンク"
+
+#: templates/app/media_details.html:412
+msgid "No details available"
+msgstr "詳細はありません"
+
+#: templates/app/media_details.html:436
+msgid "View all"
+msgstr "すべて見る"
+
+#: templates/app/media_details.html:494
+msgid "Edit entry"
+msgstr "記録を編集"
+
+#: templates/app/media_details.html:654
+msgid "Last watched:"
+msgstr "最終視聴:"
+
+#: templates/app/media_details.html:679
+msgid ""
+"Watch provider region is not configured. Set a region or disable this "
+"feature in the"
+msgstr "配信地域が未設定です。地域を選ぶか、この機能をオフにしてください。設定は"
+
+#: templates/app/media_details.html:681
+msgid "preferences"
+msgstr "設定"
+
+#: templates/app/media_details.html:711
+msgid "Main Story"
+msgstr "本編"
+
+#: templates/app/media_details.html:722
+msgid "Main + Extra"
+msgstr "本編と追加要素"
+
+#: templates/app/media_details.html:733
+msgid "Completionist"
+msgstr "完全クリア"
+
+#: templates/app/media_list.html:130 templates/app/search.html:26
+msgid "Grid View"
+msgstr "グリッド表示"
+
+#: templates/app/media_list.html:135
+msgid "Table View"
+msgstr "表表示"
+
+#: templates/app/media_list.html:171
+msgid "Last Watched"
+msgstr "最終視聴"
+
+#: templates/app/search.html:6
+msgid "Search - Yamtrack"
+msgstr "検索 - Yamtrack"
+
+#: templates/app/search.html:11
+msgid "Search Results"
+msgstr "検索結果"
+
+#: templates/app/search.html:13
+msgid "Source:"
+msgstr "提供元:"
+
+#: templates/app/search.html:29
+msgid "List View"
+msgstr "リスト表示"
+
+#: templates/app/search.html:100
+msgid "No results found"
+msgstr "見つかりませんでした"
+
+#: templates/app/statistics.html:7
+msgid "Statistics - Yamtrack"
+msgstr "統計 - Yamtrack"
+
+#: templates/app/statistics.html:12 templates/base.html:144
+msgid "Statistics"
+msgstr "統計"
+
+#: templates/app/statistics.html:13
+msgid "Track your media consumption habits"
+msgstr "視聴や読書の傾向を確認できます"
+
+#: templates/app/statistics.html:101
+msgid "Completed Items"
+msgstr "完了した作品"
+
+#: templates/app/statistics.html:129
+msgid "Average Rating"
+msgstr "平均評価"
+
+#: templates/app/statistics.html:159
+msgid "Consumption"
+msgstr "消費量"
+
+#: templates/app/statistics.html:177
+msgid "Media Type Distribution"
+msgstr "メディア種別の内訳"
+
+#: templates/app/statistics.html:188
+msgid "No media types to display"
+msgstr "表示できる種別がありません"
+
+#: templates/app/statistics.html:189
+msgid "Add different types of media to see their distribution."
+msgstr "いろいろな種類の作品を追加すると、内訳が表示されます。"
+
+#: templates/app/statistics.html:196
+msgid "Status Distribution"
+msgstr "ステータスの内訳"
+
+#: templates/app/statistics.html:207
+msgid "No status data to display"
+msgstr "表示できるステータスがありません"
+
+#: templates/app/statistics.html:208
+msgid "Track media items with different statuses to see their distribution."
+msgstr "いろいろなステータスで記録すると、内訳が表示されます。"
+
+#: templates/app/statistics.html:215
+msgid "Status Distribution by Media Type"
+msgstr "種別ごとのステータス"
+
+#: templates/app/statistics.html:226
+msgid "No data available"
+msgstr "データがありません"
+
+#: templates/app/statistics.html:228
+msgid ""
+"Add media items with different statuses to see their distribution by type."
+msgstr "いろいろなステータスで記録すると、種別ごとの内訳が表示されます。"
+
+#: templates/app/statistics.html:236
+msgid "Score Distribution by Media Type"
+msgstr "種別ごとのスコア"
+
+#: templates/app/statistics.html:247 templates/app/statistics.html:269
+msgid "No ratings yet"
+msgstr "まだ評価がありません"
+
+#: templates/app/statistics.html:248 templates/app/statistics.html:270
+msgid "Rate your media items to see score distribution statistics."
+msgstr "作品を評価すると、スコアの分布が表示されます。"
+
+#: templates/app/statistics.html:256
+msgid "Top Rated Media"
+msgstr "評価の高い作品"
+
+#: templates/base.html:129
+msgid "Create Custom"
+msgstr "カスタム作成"
+
+#: templates/base.html:174 templates/lists/components/fill_lists.html:5
+#: templates/lists/custom_lists.html:18
+msgid "Lists"
+msgstr "リスト"
+
+#: templates/base.html:189 templates/events/calendar.html:11
+msgid "Calendar"
+msgstr "カレンダー"
+
+#: templates/base.html:215 templates/users/base.html:8
+msgid "Settings"
+msgstr "設定"
+
+#: templates/base.html:224
+msgid "Logout"
+msgstr "ログアウト"
+
+#: templates/events/calendar.html:6
+msgid "Calendar - YamTrack"
+msgstr "カレンダー - Yamtrack"
+
+#: templates/events/calendar.html:12
+msgid "Track upcoming releases from your list."
+msgstr "リストにある作品の公開予定を確認できます。"
+
+#: templates/events/calendar.html:33
+#: templates/events/components/calendar_list.html:11
+msgid "Today"
+msgstr "今日"
+
+#: templates/events/calendar.html:39
+msgid "Fetch New Releases"
+msgstr "新しい公開情報を取得"
+
+#: templates/events/calendar.html:71
+msgid "Export link"
+msgstr "エクスポート用リンク"
+
+#: templates/events/calendar.html:74
+msgid ""
+"This link can be used to integrate your calendar into any of your calendar "
+"applications."
+msgstr "このリンクをカレンダーアプリに登録できます。"
+
+#: templates/lists/components/fill_lists.html:16
+msgid "You haven't created any lists yet."
+msgstr "リストはまだありません。"
+
+#: templates/lists/components/list_form.html:12
+#: templates/lists/list_detail.html:40
+msgid "Edit List"
+msgstr "リストを編集"
+
+#: templates/lists/components/list_form.html:14
+msgid "Create New List"
+msgstr "新しいリストを作成"
+
+#: templates/lists/components/list_form.html:41
+msgid "Save"
+msgstr "保存"
+
+#: templates/lists/components/list_form.html:53
+msgid "Create List"
+msgstr "リストを作成"
+
+#: templates/lists/components/list_grid.html:17
+msgid "Edit list"
+msgstr "リストを編集"
+
+#: templates/lists/components/list_item_button.html:8
+msgid "Remove"
+msgstr "外す"
+
+#: templates/lists/custom_lists.html:11
+msgid "Lists - Yamtrack"
+msgstr "リスト - Yamtrack"
+
+#: templates/lists/custom_lists.html:19
+msgid "Organize and share your media lists"
+msgstr "作品リストを整理して共有できます"
+
+#: templates/lists/custom_lists.html:24
+msgid "New List"
+msgstr "新しいリスト"
+
+#: templates/lists/custom_lists.html:38
+msgid "Search lists..."
+msgstr "リストを検索"
+
+#: templates/lists/custom_lists.html:100
+msgid "No Lists Created Yet"
+msgstr "リストはまだありません"
+
+#: templates/lists/custom_lists.html:101
+msgid ""
+"Create custom lists to organize your media collection and share with friends."
+msgstr "作品をまとめるリストを作り、友人と共有できます。"
+
+#: templates/lists/custom_lists.html:104
+msgid "Create Your First List"
+msgstr "最初のリストを作る"
+
+#: templates/lists/list_detail.html:67
+msgid "Search in collection..."
+msgstr "コレクションを検索"
+
+#: templates/lists/list_detail.html:224
+msgid "No items in this list yet"
+msgstr "このリストにはまだ作品がありません"
+
+#: templates/lists/list_detail.html:225
+msgid "Start adding your favorite media to build your collection"
+msgstr "好きな作品を追加してコレクションを作りましょう"
+
+#: templates/lists/list_detail.html:228
+msgid "Browse Media"
+msgstr "作品を探す"
+
+#: templates/socialaccount/connections.html:7
+#: templates/socialaccount/connections.html:11
+msgid "Account Connections"
+msgstr "アカウント連携"
+
+#: templates/socialaccount/connections.html:18
+msgid ""
+"You can sign in to your account using any of the following third-party "
+"accounts:"
+msgstr "次の外部アカウントでサインインできます:"
+
+#: templates/socialaccount/connections.html:66
+msgid "Remove Selected"
+msgstr "選択したものを解除"
+
+#: templates/socialaccount/connections.html:75
+msgid "You currently have no third-party accounts connected to this account."
+msgstr "外部アカウントはまだ連携されていません。"
+
+#: templates/socialaccount/connections.html:83
+msgid "Add a Third-Party Account"
+msgstr "外部アカウントを追加"
+
+#: templates/users/about.html:8
+msgid "About - Yamtrack"
+msgstr "このアプリについて - Yamtrack"
+
+#: templates/users/about.html:13
+msgid "About Yamtrack"
+msgstr "Yamtrackについて"
+
+#: templates/users/about.html:19
+msgid "Description"
+msgstr "説明"
+
+#: templates/users/about.html:22
+msgid ""
+"Yamtrack is an open-source media tracker that helps you organize and track "
+"your media."
+msgstr "Yamtrackは、作品の整理と記録のためのオープンソースのメディアトラッカーです。"
+
+#: templates/users/about.html:37
+msgid "Source Code"
+msgstr "ソースコード"
+
+#: templates/users/about.html:46
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: templates/users/about.html:55
+msgid "Bug Reports"
+msgstr "不具合報告"
+
+#: templates/users/about.html:64
+msgid "License"
+msgstr "ライセンス"
+
+#: templates/users/about.html:67
+msgid "Yamtrack is licensed under the"
+msgstr "Yamtrackのライセンスは"
+
+#: templates/users/about.html:72
+msgid "GNU Affero General Public License v3.0 (AGPL-3.0)"
+msgstr "GNU Affero General Public License v3.0 (AGPL-3.0)"
+
+#: templates/users/about.html:79
+msgid "Attribution"
+msgstr "クレジット"
+
+#: templates/users/about.html:82
+msgid "Movie and TV streaming providers from"
+msgstr "映画とテレビの配信情報の提供元:"
+
+#: templates/users/about.html:87
+msgid "JustWatch"
+msgstr "JustWatch"
+
+#: templates/users/about.html:95
+msgid "Version:"
+msgstr "バージョン:"
+
+#: templates/users/account.html:8
+msgid "Account - Yamtrack"
+msgstr "アカウント - Yamtrack"
+
+#: templates/users/account.html:16
+msgid "Profile Information"
+msgstr "プロフィール"
+
+#: templates/users/account.html:29
+msgid "Username"
+msgstr "ユーザー名"
+
+#: templates/users/account.html:42
+msgid "Profile visibility"
+msgstr "プロフィールの公開"
+
+#: templates/users/account.html:47
+msgid "Private profile"
+msgstr "非公開プロフィール"
+
+#: templates/users/account.html:49
+msgid "Hide your profile and media lists from anonymous visitors."
+msgstr "ログインしていない人から、プロフィールとリストを隠します。"
+
+#: templates/users/account.html:68 templates/users/integrations.html:149
+#: templates/users/integrations.html:275
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: templates/users/account.html:77
+msgid "Change Password"
+msgstr "パスワードを変更"
+
+#: templates/users/account.html:92
+msgid "Current Password"
+msgstr "現在のパスワード"
+
+#: templates/users/account.html:116
+msgid "New Password"
+msgstr "新しいパスワード"
+
+#: templates/users/account.html:140
+msgid "Confirm New Password"
+msgstr "新しいパスワード（確認）"
+
+#: templates/users/account.html:166
+msgid "Update Password"
+msgstr "パスワードを更新"
+
+#: templates/users/account.html:177
+msgid "Third-Party Connections"
+msgstr "外部アカウント"
+
+#: templates/users/account.html:179
+msgid "Manage your connected third-party accounts for easier sign-in."
+msgstr "サインインを簡単にするため、連携した外部アカウントを管理します。"
+
+#: templates/users/account.html:183
+msgid "Manage Account Connections"
+msgstr "アカウント連携を管理"
+
+#: templates/users/advanced.html:8
+msgid "Advanced - Yamtrack"
+msgstr "詳細設定 - Yamtrack"
+
+#: templates/users/advanced.html:17 templates/users/base.html:61
+msgid "Advanced"
+msgstr "詳細設定"
+
+#: templates/users/advanced.html:23 templates/users/advanced.html:38
+msgid "Clear Search Cache"
+msgstr "検索キャッシュを消去"
+
+#: templates/users/advanced.html:26
+msgid ""
+"Yamtrack stores your search results in a cache to speed up performance and "
+"reduce API calls."
+msgstr "検索結果はキャッシュされ、表示が速くなり、APIの呼び出しも減ります。"
+
+#: templates/users/advanced.html:28
+msgid ""
+"Normally, these cached results expire automatically after 24 hours. If your "
+"search results appear outdated, you can clear the cache manually."
+msgstr "キャッシュは通常24時間で消えます。検索結果が古いときは、手動で消去できます。"
+
+#: templates/users/advanced.html:30
+msgid "Your next search may be slightly slower as fresh data is retrieved."
+msgstr "次の検索は、新しい情報を取り直すため少し遅くなることがあります。"
+
+#: templates/users/base.html:9
+msgid "Configure your account and preferences"
+msgstr "アカウントと表示を設定します"
+
+#: templates/users/base.html:19
+msgid "Account"
+msgstr "アカウント"
+
+#: templates/users/base.html:26 templates/users/preferences.html:14
+msgid "Preferences"
+msgstr "設定"
+
+#: templates/users/base.html:33 templates/users/notifications.html:16
+msgid "Notifications"
+msgstr "通知"
+
+#: templates/users/base.html:40
+msgid "Integrations"
+msgstr "連携"
+
+#: templates/users/base.html:47
+msgid "Import Data"
+msgstr "データをインポート"
+
+#: templates/users/base.html:54 templates/users/export_data.html:12
+msgid "Export Data"
+msgstr "データをエクスポート"
+
+#: templates/users/base.html:68
+msgid "About"
+msgstr "このアプリについて"
+
+#: templates/users/components/excluded_items.html:4
+msgid "Currently Excluded:"
+msgstr "除外中:"
+
+#: templates/users/components/excluded_items.html:30
+msgid "No media items excluded yet"
+msgstr "除外している作品はありません"
+
+#: templates/users/components/search_results.html:22
+msgid "Exclude"
+msgstr "除外"
+
+#: templates/users/components/search_results.html:28
+msgid "No matching items found"
+msgstr "一致する作品はありません"
+
+#: templates/users/export_data.html:5
+msgid "Export - Yamtrack"
+msgstr "エクスポート - Yamtrack"
+
+#: templates/users/export_data.html:14
+msgid "Back up your data or export it for use with other services."
+msgstr "データをバックアップするか、ほかのサービスで使える形で書き出します。"
+
+#: templates/users/export_data.html:15
+msgid "Your export will include all your media items."
+msgstr "書き出しには、記録した作品がすべて含まれます。"
+
+#: templates/users/export_data.html:19
+msgid "Export as CSV"
+msgstr "CSVで書き出す"
+
+#: templates/users/import_data.html:7
+msgid "Import - Yamtrack"
+msgstr "インポート - Yamtrack"
+
+#: templates/users/import_data.html:18
+msgid "Import Settings"
+msgstr "インポート設定"
+
+#: templates/users/import_data.html:20
+msgid "Configure your import preferences."
+msgstr "インポートの方法を設定します。"
+
+#: templates/users/import_data.html:24
+msgid "Import Frequency"
+msgstr "インポートの頻度"
+
+#: templates/users/import_data.html:28
+msgid "One Time Import"
+msgstr "1回だけ"
+
+#: templates/users/import_data.html:29
+msgid "Every Day"
+msgstr "毎日"
+
+#: templates/users/import_data.html:30
+msgid "Every 2 Days"
+msgstr "2日ごと"
+
+#: templates/users/import_data.html:35
+msgid "Import Time"
+msgstr "インポート時刻"
+
+#: templates/users/import_data.html:42
+msgid "Import Mode"
+msgstr "インポート方法"
+
+#: templates/users/import_data.html:46
+msgid "Only Sync New Items"
+msgstr "新しい作品だけ同期"
+
+#: templates/users/import_data.html:47
+msgid "Sync New Items and Overwrite Existing"
+msgstr "新しい作品を同期し、既存も上書き"
+
+#: templates/users/import_data.html:60
+msgid "Import Sources"
+msgstr "インポート元"
+
+#: templates/users/import_data.html:63
+msgid "Some of these require additional configuration, check the"
+msgstr "追加の設定が必要なものがあります。詳しくは"
+
+#: templates/users/import_data.html:66
+msgid "import configuration guide"
+msgstr "インポートのガイド"
+
+#: templates/users/import_data.html:79
+msgid "Import method"
+msgstr "インポート方法"
+
+#: templates/users/import_data.html:82
+msgid "Public"
+msgstr "公開"
+
+#: templates/users/import_data.html:83
+msgid "Private (requires authentication)"
+msgstr "非公開（認証が必要）"
+
+#: templates/users/import_data.html:84
+msgid "Export (requires ZIP file)"
+msgstr "エクスポート（ZIPファイルが必要）"
+
+#: templates/users/import_data.html:98
+msgid "Public Trakt username"
+msgstr "公開されているTraktユーザー名"
+
+#: templates/users/import_data.html:105 templates/users/import_data.html:182
+#: templates/users/import_data.html:220 templates/users/import_data.html:268
+#: templates/users/import_data.html:361
+msgid "Import"
+msgstr "インポート"
+
+#: templates/users/import_data.html:121
+msgid "Connect with Trakt & Import"
+msgstr "Traktに接続してインポート"
+
+#: templates/users/import_data.html:143
+msgid "Select ZIP File"
+msgstr "ZIPファイルを選択"
+
+#: templates/users/import_data.html:151
+msgid "Import TV shows, movies and anime"
+msgstr "テレビ番組、映画、アニメをインポート"
+
+#: templates/users/import_data.html:159
+msgid "Connect with Simkl & Import"
+msgstr "Simklに接続してインポート"
+
+#: templates/users/import_data.html:167 templates/users/import_data.html:192
+#: templates/users/import_data.html:244
+msgid "Import anime and manga"
+msgstr "アニメとマンガをインポート"
+
+#: templates/users/import_data.html:176
+msgid "MAL username"
+msgstr "MALのユーザー名"
+
+#: templates/users/import_data.html:199
+msgid "Import private profile (requires authentication)"
+msgstr "非公開プロフィールをインポート（認証が必要）"
+
+#: templates/users/import_data.html:213
+msgid "Public AniList username"
+msgstr "公開されているAniListユーザー名"
+
+#: templates/users/import_data.html:236
+msgid "Connect with AniList & Import"
+msgstr "AniListに接続してインポート"
+
+#: templates/users/import_data.html:253
+msgid "Kitsu user ID"
+msgstr "KitsuのユーザーID"
+
+#: templates/users/import_data.html:260
+msgid "Find it on your Kitsu profile URL:"
+msgstr "KitsuのプロフィールURLにあります:"
+
+#: templates/users/import_data.html:280
+msgid "View CSV format documentation"
+msgstr "CSV形式の説明を見る"
+
+#: templates/users/import_data.html:301 templates/users/import_data.html:328
+#: templates/users/import_data.html:390 templates/users/import_data.html:417
+msgid "Select CSV File"
+msgstr "CSVファイルを選択"
+
+#: templates/users/import_data.html:336
+msgid "Import games from your Steam library"
+msgstr "Steamライブラリのゲームをインポート"
+
+#: templates/users/import_data.html:345
+msgid "Steam 64-bit ID"
+msgstr "Steamの64ビットID"
+
+#: templates/users/import_data.html:352
+msgid "Find it on your Steam account details page under your username."
+msgstr "Steamのアカウント詳細ページで、ユーザー名の下にあります。"
+
+#: templates/users/import_data.html:355
+msgid ""
+"Your profile must be public if the API key you are using is not linked to "
+"the steamid you are requesting."
+msgstr "使っているAPIキーがそのSteam IDに紐づいていない場合、プロフィールは公開である必要があります。"
+
+#: templates/users/import_data.html:429
+msgid "Active Periodic Imports"
+msgstr "定期インポート"
+
+#: templates/users/import_data.html:432
+msgid ""
+"Automated imports that run on a schedule. These will continue to sync your "
+"media until disabled."
+msgstr "決めた間隔で自動的に同期します。無効にするまで続きます。"
+
+#: templates/users/import_data.html:461
+msgid "No periodic imports configured"
+msgstr "定期インポートは設定されていません"
+
+#: templates/users/import_data.html:462
+msgid "Set up an import with a daily or 2-day frequency to see it here"
+msgstr "毎日または2日ごとのインポートを設定すると、ここに表示されます"
+
+#: templates/users/import_data.html:472
+msgid "Import History"
+msgstr "インポート履歴"
+
+#: templates/users/import_data.html:475
+msgid "Showing import activity from the last 7 days."
+msgstr "過去7日間のインポートを表示しています。"
+
+#: templates/users/import_data.html:486
+msgid "Success"
+msgstr "成功"
+
+#: templates/users/import_data.html:490
+msgid "Started"
+msgstr "開始"
+
+#: templates/users/import_data.html:492
+msgid "Failed"
+msgstr "失敗"
+
+#: templates/users/import_data.html:494
+msgid "Pending"
+msgstr "待機中"
+
+#: templates/users/import_data.html:510
+msgid "Show failed items"
+msgstr "失敗した項目を表示"
+
+#: templates/users/import_data.html:515
+msgid "Show traceback"
+msgstr "トレースバックを表示"
+
+#: templates/users/import_data.html:530
+msgid "No imports in the last 7 days"
+msgstr "過去7日間のインポートはありません"
+
+#: templates/users/import_data.html:531
+msgid "Import your media from any source to see the history here"
+msgstr "どこかからインポートすると、履歴がここに表示されます"
+
+#: templates/users/integrations.html:7
+msgid "Integrations - Yamtrack"
+msgstr "連携 - Yamtrack"
+
+#: templates/users/integrations.html:21
+msgid "Token"
+msgstr "トークン"
+
+#: templates/users/integrations.html:23
+msgid ""
+"This token is used to authenticate webhook requests from your media servers."
+msgstr "このトークンは、メディアサーバーからのWebhookを認証するために使います。"
+
+#: templates/users/integrations.html:32 templates/users/integrations.html:168
+#: templates/users/integrations.html:198 templates/users/integrations.html:233
+#: templates/users/integrations.html:303 templates/users/integrations.html:339
+msgid "Copy"
+msgstr "コピー"
+
+#: templates/users/integrations.html:41
+msgid "Regenerating will invalidate the previous token"
+msgstr "再生成すると、以前のトークンは使えなくなります"
+
+#: templates/users/integrations.html:49
+msgid "Regenerate"
+msgstr "再生成"
+
+#: templates/users/integrations.html:58
+msgid "Media Servers"
+msgstr "メディアサーバー"
+
+#: templates/users/integrations.html:60
+msgid ""
+"Connect your media servers to automatically track your watching progress."
+msgstr "メディアサーバーを接続すると、視聴の進捗を自動で記録します。"
+
+#: templates/users/integrations.html:64
+msgid "Integration services"
+msgstr "連携サービス"
+
+#: templates/users/integrations.html:72 templates/users/integrations.html:97
+msgid "Jellyfin"
+msgstr "Jellyfin"
+
+#: templates/users/integrations.html:81 templates/users/integrations.html:252
+msgid "Plex"
+msgstr "Plex"
+
+#: templates/users/integrations.html:90 templates/users/integrations.html:319
+msgid "Emby"
+msgstr "Emby"
+
+#: templates/users/integrations.html:99
+msgid "Connect Jellyfin to automatically track your watching progress."
+msgstr "Jellyfinを接続すると、視聴の進捗を自動で記録します。"
+
+#: templates/users/integrations.html:101
+msgid "Webhook Events"
+msgstr "Webhookのイベント"
+
+#: templates/users/integrations.html:103
+msgid ""
+"Play and Stop events are always processed. Enable these to sync manual "
+"watched changes from the unofficial Webhooks plugin."
+msgstr "再生と停止は常に処理されます。非公式のWebhooksプラグインで手動の視聴状態も同期する場合は、次を有効にしてください。"
+
+#: templates/users/integrations.html:113
+msgid "Process MarkPlayed events"
+msgstr "視聴済み（MarkPlayed）を処理"
+
+#: templates/users/integrations.html:115
+msgid "Mark media as watched when it is manually marked played in Jellyfin."
+msgstr "Jellyfinで手動で視聴済みにした作品を、視聴済みとして記録します。"
+
+#: templates/users/integrations.html:130
+msgid "Process MarkUnplayed events"
+msgstr "未視聴（MarkUnplayed）を処理"
+
+#: templates/users/integrations.html:133
+msgid ""
+"Remove watched progress when it is manually marked unplayed in Jellyfin. "
+"This event can delete media from Yamtrack."
+msgstr "Jellyfinで未視聴に戻した作品の進捗を消します。このイベントでYamtrackから作品が削除されることがあります。"
+
+#: templates/users/integrations.html:155
+msgid "Official Webhook Plugin"
+msgstr "公式のWebhookプラグイン"
+
+#: templates/users/integrations.html:157 templates/users/integrations.html:210
+msgid "You will need to have TMDB and TVDB as metadata providers in Jellyfin."
+msgstr "Jellyfinのメタデータ提供元にTMDBとTVDBが必要です。"
+
+#: templates/users/integrations.html:158
+msgid ""
+"Install the Webhook plugin from the 'Jellyfin Stable' repo via your server's "
+"Plugin Catalog."
+msgstr "サーバーのプラグインカタログで、「Jellyfin Stable」リポジトリからWebhookプラグインをインストールします。"
+
+#: templates/users/integrations.html:160 templates/users/integrations.html:227
+msgid "Restart your server, then configure the plugin:"
+msgstr "サーバーを再起動してから、プラグインを設定します:"
+
+#: templates/users/integrations.html:163
+msgid "Name: Yamtrack"
+msgstr "名前: Yamtrack"
+
+#: templates/users/integrations.html:174
+msgid "Notification Type: Playback Start and Playback Stop"
+msgstr "通知の種類: 再生開始と再生停止"
+
+#: templates/users/integrations.html:175
+msgid "User Filter: Your Jellyfin User"
+msgstr "ユーザーフィルター: 自分のJellyfinユーザー"
+
+#: templates/users/integrations.html:208
+msgid "Unofficial Webhooks Plugin"
+msgstr "非公式のWebhooksプラグイン"
+
+#: templates/users/integrations.html:212
+msgid "Add this repository"
+msgstr "このリポジトリを追加"
+
+#: templates/users/integrations.html:216
+msgid "link"
+msgstr "リンク"
+
+#: templates/users/integrations.html:224
+msgid "Unofficial Webhooks plugin"
+msgstr "非公式のWebhooksプラグイン"
+
+#: templates/users/integrations.html:239
+msgid "Payload format: Default"
+msgstr "ペイロード形式: Default"
+
+#: templates/users/integrations.html:240
+msgid "Listen to events only for: Your Jellyfin User"
+msgstr "イベントの対象ユーザー: 自分のJellyfinユーザー"
+
+#: templates/users/integrations.html:241
+msgid "Events: Play, Stop, MarkPlayed and MarkUnplayed"
+msgstr "イベント: Play、Stop、MarkPlayed、MarkUnplayed"
+
+#: templates/users/integrations.html:254
+msgid "Connect Plex to automatically track your watching progress."
+msgstr "Plexを接続すると、視聴の進捗を自動で記録します。"
+
+#: templates/users/integrations.html:256
+msgid "Plex Usernames"
+msgstr "Plexのユーザー名"
+
+#: templates/users/integrations.html:263
+msgid ""
+"This username (or several, comma separated) will be used to filter which "
+"events are sent to your webhook."
+msgstr "このユーザー名（複数の場合はカンマ区切り）で、Webhookに送るイベントを絞り込みます。"
+
+#: templates/users/integrations.html:268
+msgid "username1, username2, username3"
+msgstr "username1, username2, username3"
+
+#: templates/users/integrations.html:281 templates/users/integrations.html:323
+msgid "Setup Instructions"
+msgstr "設定手順"
+
+#: templates/users/integrations.html:283
+msgid "You will need to have a PlexPass in order to have webhooks enabled"
+msgstr "Webhookを使うにはPlex Passが必要です"
+
+#: templates/users/integrations.html:286
+msgid "In Plex settings, go to"
+msgstr "Plexの設定で次を開きます:"
+
+#: templates/users/integrations.html:290
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: templates/users/integrations.html:321
+msgid "Connect Emby to automatically track your watching progress."
+msgstr "Embyを接続すると、視聴の進捗を自動で記録します。"
+
+#: templates/users/integrations.html:328
+msgid "In the Notification settings:"
+msgstr "通知の設定で:"
+
+#: templates/users/integrations.html:346
+msgid "Request content type: multipart/form-data"
+msgstr "リクエストの形式: multipart/form-data"
+
+#: templates/users/integrations.html:347
+msgid "Events: Play and Stop"
+msgstr "イベント: PlayとStop"
+
+#: templates/users/integrations.html:348
+msgid "Limit user events to: Your Emby User"
+msgstr "イベントの対象ユーザー: 自分のEmbyユーザー"
+
+#: templates/users/notifications.html:7
+msgid "Notifications - Yamtrack"
+msgstr "通知 - Yamtrack"
+
+#: templates/users/notifications.html:19
+msgid "Configure how you want to receive notifications about your media."
+msgstr "作品の通知の受け取り方を設定します。"
+
+#: templates/users/notifications.html:27
+msgid "Apprise URLs"
+msgstr "AppriseのURL"
+
+#: templates/users/notifications.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: templates/users/notifications.html:39
+msgid "is a notification service that supports"
+msgstr "は、次のような通知先に対応したサービスです。"
+
+#: templates/users/notifications.html:43
+msgid "many platforms"
+msgstr "多くのサービス"
+
+#: templates/users/notifications.html:43
+msgid "including:"
+msgstr "例:"
+
+#: templates/users/notifications.html:46
+msgid "Discord"
+msgstr "Discord"
+
+#: templates/users/notifications.html:47
+msgid "Telegram"
+msgstr "Telegram"
+
+#: templates/users/notifications.html:48
+msgid "Slack"
+msgstr "Slack"
+
+#: templates/users/notifications.html:49
+msgid "Email"
+msgstr "メール"
+
+#: templates/users/notifications.html:50
+msgid "Pushover"
+msgstr "Pushover"
+
+#: templates/users/notifications.html:51
+msgid "ntfy"
+msgstr "ntfy"
+
+#: templates/users/notifications.html:52
+msgid "And many more..."
+msgstr "ほかにも多数あります"
+
+#: templates/users/notifications.html:55
+msgid "Enter one URL per line. Example:"
+msgstr "1行に1つのURLを入力します。例:"
+
+#: templates/users/notifications.html:61
+msgid ""
+"Enter each Apprise URL on a separate line to send notifications to multiple "
+"services."
+msgstr "複数のサービスに送る場合は、AppriseのURLを1行ずつ入力します。"
+
+#: templates/users/notifications.html:66
+msgid "Notification Settings"
+msgstr "通知設定"
+
+#: templates/users/notifications.html:75
+msgid "Enable Daily Digest"
+msgstr "1日のまとめを有効にする"
+
+#: templates/users/notifications.html:78
+msgid ""
+"Receive a single notification each day with all media scheduled to release "
+"that day"
+msgstr "その日に公開される作品を、1通にまとめて受け取ります"
+
+#: templates/users/notifications.html:97
+msgid "Receive notifications for recently released media"
+msgstr "最近公開された作品の通知を受け取る"
+
+#: templates/users/notifications.html:99
+msgid "Get notified when new episodes, chapters, or other media are released"
+msgstr "新しい話や章、その他の作品が公開されたときに通知します"
+
+#: templates/users/notifications.html:119
+msgid "Test Notifications"
+msgstr "通知を試す"
+
+#: templates/users/notifications.html:124
+msgid "Save Settings"
+msgstr "設定を保存"
+
+#: templates/users/notifications.html:134
+msgid "Excluded Media Items"
+msgstr "通知から除外する作品"
+
+#: templates/users/notifications.html:137
+msgid "Exclude specific media items from notifications:"
+msgstr "通知したくない作品を除外します:"
+
+#: templates/users/notifications.html:140
+msgid "Search for media to exclude..."
+msgstr "除外する作品を検索"
+
+#: templates/users/preferences.html:7
+msgid "Preferences - Yamtrack"
+msgstr "設定 - Yamtrack"
+
+#: templates/users/preferences.html:16
+msgid "Customize the look and behavior of the application."
+msgstr "表示と動作をカスタマイズします。"
+
+#: templates/users/preferences.html:24
+msgid "Language"
+msgstr "言語"
+
+#: templates/users/preferences.html:27
+msgid ""
+"Choose the language for the interface. Site default follows LANGUAGE_CODE."
+msgstr "表示言語を選びます。未設定のときは LANGUAGE_CODE に従います。"
+
+#: templates/users/preferences.html:32
+msgid "Site default"
+msgstr "サイトの規定"
+
+#: templates/users/preferences.html:45
+msgid "Hide Hover Overlay on Touch Devices"
+msgstr "タッチ端末ではホバー表示を隠す"
+
+#: templates/users/preferences.html:48
+msgid ""
+"Hide the media card hover overlay with action buttons on touch devices for a "
+"cleaner mobile experience."
+msgstr "タッチ端末では、作品カードの操作ボタンを隠して画面をすっきりさせます。"
+
+#: templates/users/preferences.html:49
+msgid ""
+"On desktop, the overlay will still appear when you hover your mouse over "
+"media cards."
+msgstr "パソコンでは、マウスを重ねるとこれまでどおり表示されます。"
+
+#: templates/users/preferences.html:69
+msgid "Obfuscate Unseen Episodes"
+msgstr "未視聴のエピソードをぼかす"
+
+#: templates/users/preferences.html:71
+msgid "When enabled, unseen episode images and descriptions will be blurred."
+msgstr "有効にすると、未視聴のエピソードの画像と説明がぼかされます。"
+
+#: templates/users/preferences.html:90
+msgid "Bulk Completion Date"
+msgstr "まとめて完了したときの日付"
+
+#: templates/users/preferences.html:93
+msgid ""
+"When marking a TV show or season as completed, its episodes will be marked "
+"as completed with this date."
+msgstr "テレビ番組やシーズンを視聴済みにするとき、各話もこの日付で視聴済みになります。"
+
+#: templates/users/preferences.html:112
+msgid "Show progress bar on media items"
+msgstr "作品に進捗バーを表示"
+
+#: templates/users/preferences.html:115
+msgid ""
+"Display a progress bar on media items. Items which don't have max progress "
+"will be using a dotted line."
+msgstr "作品に進捗バーを表示します。全体の長さが分からない作品は点線になります。"
+
+#: templates/users/preferences.html:135
+msgid "Hide completed media in recommendations"
+msgstr "おすすめから視聴済みを隠す"
+
+#: templates/users/preferences.html:138
+msgid ""
+"Hide media you've already completed from the recommendations section on "
+"detail pages."
+msgstr "詳細ページのおすすめから、視聴済みの作品を隠します。"
+
+#: templates/users/preferences.html:158
+msgid "Hide zero ratings"
+msgstr "評価0を隠す"
+
+#: templates/users/preferences.html:160
+msgid "Hide the rating badge from media cards when the rating is zero."
+msgstr "評価が0のとき、作品カードの評価を表示しません。"
+
+#: templates/users/preferences.html:179
+msgid "Date Format"
+msgstr "日付の形式"
+
+#: templates/users/preferences.html:181
+msgid "Choose how dates are displayed throughout the application."
+msgstr "アプリ内の日付の表示形式を選びます。"
+
+#: templates/users/preferences.html:199
+msgid "Time Format"
+msgstr "時刻の形式"
+
+#: templates/users/preferences.html:201
+msgid "Choose between 12-hour or 24-hour clock display."
+msgstr "12時間表示か24時間表示かを選びます。"
+
+#: templates/users/preferences.html:219
+msgid "Week Start Day"
+msgstr "週の開始曜日"
+
+#: templates/users/preferences.html:221
+msgid "Choose which day the week starts on for calendars and statistics."
+msgstr "カレンダーと統計で、週の始まりを何曜日にするか選びます。"
+
+#: templates/users/preferences.html:239
+msgid "Watch provider region"
+msgstr "配信情報の地域"
+
+#: templates/users/preferences.html:242
+msgid ""
+"Choose the region to show watch providers for. Setting this to disabled will "
+"hide the box from the media page."
+msgstr "配信サービスを表示する地域を選びます。無効にすると、作品ページからこの欄が消えます。"
+
+#: templates/users/preferences.html:261
+msgid "Media Types"
+msgstr "メディア種別"
+
+#: templates/users/preferences.html:264
+msgid ""
+"Control which media types are visible throughout the app (sidebar, search, "
+"calendar, notifications)."
+msgstr "サイドバー、検索、カレンダー、通知に出す種別を選びます。"
+
+#: templates/users/preferences.html:294
+msgid "Save Preferences"
+msgstr "設定を保存"
+
+#: users/forms.py:20
+msgid "Enter your username"
+msgstr "ユーザー名を入力"
+
+#: users/forms.py:22
+msgid "Enter your password"
+msgstr "パスワードを入力"
+
+#: users/forms.py:35
+msgid "Confirm Password"
+msgstr "パスワード（確認）"
+
+#: users/forms.py:36
+msgid "Confirm your password"
+msgstr "パスワードを再入力"
+
+#: users/views.py:43
+msgid "Your profile has been updated!"
+msgstr "プロフィールを更新しました。"
+
+#: users/views.py:68
+msgid "Your password has been updated!"
+msgstr "パスワードを更新しました。"
+
+#: users/views.py:95
+msgid "Notification settings updated successfully!"
+msgstr "通知設定を更新しました。"
+
+#: users/views.py:194
+msgid "No notification URLs configured."
+msgstr "通知先のURLが設定されていません。"
+
+#: users/views.py:210
+msgid "Test notification sent successfully!"
+msgstr "テスト通知を送りました。"
+
+#: users/views.py:212
+msgid "Failed to send test notification."
+msgstr "テスト通知を送れませんでした。"
+
+#: users/views.py:242
+msgid "This section is view-only for demo accounts."
+msgstr "デモアカウントでは、この項目は見るだけです。"
+
+#: users/views.py:290
+msgid "Settings updated."
+msgstr "設定を更新しました。"
+
+#: users/views.py:341
+msgid "Import schedule deleted."
+msgstr "インポートの予約を削除しました。"
+
+#: users/views.py:343
+msgid "Import schedule not found."
+msgstr "インポートの予約が見つかりません。"
+
+#: users/views.py:353
+msgid "Token regenerated successfully."
+msgstr "トークンを再生成しました。"
+
+#: users/views.py:378
+msgid "Plex usernames updated successfully"
+msgstr "Plexのユーザー名を更新しました。"
+
+#: users/views.py:398
+msgid "Jellyfin webhook settings updated successfully"
+msgstr "JellyfinのWebhook設定を更新しました。"
+
+#: users/views.py:409
+#, python-format
+msgid "Successfully cleared %(count)s search entry"
+msgstr "検索キャッシュを%(count)s件消去しました"
+
+#: users/views.py:411
+#, python-format
+msgid "Successfully cleared %(count)s search entries"
+msgstr "検索キャッシュを%(count)s件消去しました"
+
+#: templates/app/media_details.html
+msgid "%(source)s SCORE"
+msgstr "%(source)sのスコア"
+
+#: templates/app/media_details.html
+msgid "%(count)s cast member"
+msgid_plural "%(count)s cast members"
+msgstr[0] "%(count)s人"
+
+#: templates/base.html
+msgid "Search __MEDIA__..."
+msgstr "__MEDIA__を検索..."
+
+#: templates/app/media_list.html
+msgid "Search %(media)s in your list..."
+msgstr "自分のリストから%(media)sを検索..."
+
+#: templates/app/media_list.html
+msgid "Search %(media)s in %(username)s's list..."
+msgstr "%(username)sのリストから%(media)sを検索..."
+
+#: templates/app/components/home_section.html
+#, python-format
+msgid "%(counter)s item"
+msgid_plural "%(counter)s items"
+msgstr[0] "%(counter)s件"

@@ -6,9 +6,20 @@ from django.urls import reverse
 from django.utils import formats, timezone
 from django.utils.dateparse import parse_date
 from django.utils.html import format_html
+from django.utils.translation import gettext as _
 from unidecode import unidecode
 
 from app import config, helpers
+from app.i18n import (
+    DETAIL_LABELS,
+    MEDIA_TYPE_LABELS,
+    MEDIA_TYPE_PLURALS,
+    RELATED_LABELS,
+    choice_label,
+    detail_value,
+    status_label,
+    unit_label,
+)
 from app.models import MediaTypes, Sources, Status
 from users.models import WATCH_PROVIDER_REGION_UNSET
 
@@ -38,6 +49,36 @@ def absolute_app_url(context, path):
 def no_underscore(arg1):
     """Return the title case of the string."""
     return arg1.replace("_", " ")
+
+
+@register.filter(name="tr")
+def translate_text(value):
+    """Translate a known UI label. Unknown strings are returned unchanged."""
+    if value is None:
+        return value
+    return choice_label(str(value))
+
+
+@register.filter
+def detail_label(key):
+    """Translate a metadata detail key such as ``start_date``."""
+    label = str(key).replace("_", " ")
+    return DETAIL_LABELS.get(label, label)
+
+
+@register.filter
+def tr_value(value):
+    """Translate a known metadata value such as a release status."""
+    return detail_value(value)
+
+
+@register.filter
+def related_label(name):
+    """Translate a related-media section name."""
+    if name == "dlcs":
+        return RELATED_LABELS["DLCs"]
+    label = str(name).replace("_", " ").title()
+    return RELATED_LABELS.get(label, label)
 
 
 @register.filter
@@ -135,25 +176,29 @@ def source_readable(source):
 @register.filter
 def media_type_readable(media_type):
     """Return the readable media type."""
-    return MediaTypes(media_type).label
+    return MEDIA_TYPE_LABELS.get(media_type, MediaTypes(media_type).label)
 
 
 @register.filter
 def media_type_readable_plural(media_type):
     """Return the readable media type in plural form."""
-    singular = MediaTypes(media_type).label
+    if media_type in MEDIA_TYPE_PLURALS:
+        return MEDIA_TYPE_PLURALS[media_type]
 
-    # Special cases that don't change in plural form
+    singular = MediaTypes(media_type).label
     if singular.lower() in [MediaTypes.ANIME.value, MediaTypes.MANGA.value]:
         return singular
-
     return f"{singular}s"
 
 
 @register.filter
 def media_status_readable(media_status):
     """Return the readable media status."""
-    return Status(media_status).label
+    try:
+        label = Status(media_status).label
+    except ValueError:
+        label = media_status
+    return status_label(label)
 
 
 @register.filter
@@ -177,13 +222,13 @@ def sample_search(media_type):
 @register.filter
 def short_unit(media_type):
     """Return the short unit for the media type."""
-    return config.get_unit(media_type, short=True)
+    return unit_label(config.get_unit(media_type, short=True))
 
 
 @register.filter
 def long_unit(media_type):
     """Return the long unit for the media type."""
-    return config.get_unit(media_type, short=False)
+    return unit_label(config.get_unit(media_type, short=False))
 
 
 @register.filter
@@ -280,9 +325,9 @@ def natural_day(datetime, user):
     days = (datetime_date - today).days
 
     if days == 0:
-        return f"Today {formatted_time}"
+        return _("Today %(time)s") % {"time": formatted_time}
     if days == 1:
-        return f"Tomorrow {formatted_time}"
+        return _("Tomorrow %(time)s") % {"time": formatted_time}
 
     return f"{formatted_date} {formatted_time}"
 
