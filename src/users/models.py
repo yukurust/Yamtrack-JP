@@ -101,6 +101,7 @@ class DateFormatChoices(models.TextChoices):
     US = "m/d/Y", "01/18/2026 (US)"
     LONG = "M j, Y", "Jan 18, 2026"
     LONG_EU = "j M, Y", "18 Jan, 2026"
+    JAPANESE = "Y年n月j日", "2026年1月18日"
 
 
 class TimeFormatChoices(models.TextChoices):
@@ -108,6 +109,13 @@ class TimeFormatChoices(models.TextChoices):
 
     HOUR_24 = "H:i", "14:30 (24-hour)"
     HOUR_12 = "g:i A", "2:30 PM (12-hour)"
+
+
+class LanguageChoices(models.TextChoices):
+    """Interface languages shipped by this fork."""
+
+    JA = "ja", "日本語"
+    EN = "en", "English"
 
 
 class WeekStartDayChoices(models.TextChoices):
@@ -341,6 +349,14 @@ class User(AbstractUser):
         default=WeekStartDayChoices.MONDAY,
         choices=WeekStartDayChoices,
         help_text="First day of the week",
+    )
+
+    # Empty uses the site LANGUAGE_CODE (ja on this fork).
+    language = models.CharField(
+        max_length=10,
+        blank=True,
+        default="",
+        help_text="Interface language. Empty uses the site default.",
     )
 
     # Progress bar

@@ -53,7 +53,10 @@ COPY --from=builder /yamtrack/.venv /yamtrack/.venv
 
 # Django app
 COPY src ./
-RUN python manage.py collectstatic --noinput
+RUN apk add --no-cache --virtual .i18n-build gettext \
+    && python manage.py compilemessages \
+    && python manage.py collectstatic --noinput \
+    && apk del .i18n-build
 
 # Default nginx listen port; overridden at runtime with YAMTRACK_INTERNAL_PORT
 EXPOSE 8000

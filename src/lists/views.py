@@ -5,6 +5,7 @@ from django.core.paginator import Paginator
 from django.db.models import Count, F, OuterRef, Q, Subquery
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
+from django.utils.translation import gettext as _
 from django.views.decorators.http import require_GET, require_POST
 
 from app import helpers
@@ -230,7 +231,7 @@ def edit(request):
             form.save()
             logger.info("%s list edited successfully.", custom_list)
     else:
-        messages.error(request, "You do not have permission to edit this list.")
+        messages.error(request, _("You do not have permission to edit this list."))
     return helpers.redirect_back(request)
 
 
@@ -244,7 +245,7 @@ def delete(request):
         logger.info("%s list deleted successfully.", custom_list)
         return redirect("lists")
 
-    messages.error(request, "You do not have permission to delete this list.")
+    messages.error(request, _("You do not have permission to delete this list."))
     return helpers.redirect_back(request)
 
 

@@ -13,6 +13,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.utils.encoding import iri_to_uri
 from django.utils.http import url_has_allowed_host_and_scheme
+from django.utils.translation import gettext as _
 
 from app.models import BasicMedia, Item, MediaTypes, Status
 
@@ -128,7 +129,11 @@ def form_error_messages(form, request):
         for error in errors:
             messages.error(
                 request,
-                f"{field.replace('_', ' ').title()}: {error}",
+                _("%(field)s: %(error)s")
+                % {
+                    "field": field.replace("_", " ").title(),
+                    "error": error,
+                },
             )
 
 

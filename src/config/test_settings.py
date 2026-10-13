@@ -17,5 +17,9 @@ CELERY_TASK_ALWAYS_EAGER = True
 
 TESTING = True
 
+# Keep existing tests on English UI text and English provider payloads.
+LANGUAGE_CODE = "en"
+TMDB_LANG = "en"
+
 # Steam API key for testing
 STEAM_API_KEY = "test_steam_api_key"

@@ -137,9 +137,11 @@ MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "app.middleware.UserLanguageMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.auth.middleware.LoginRequiredMiddleware",
@@ -164,6 +166,7 @@ TEMPLATES = [
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
@@ -313,7 +316,21 @@ LOGGING = {
 # Internationalization
 # https://docs.djangoproject.com/en/stable/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+# ja (default) or en. ja-JP / en-us are accepted and normalized.
+_REQUESTED_LANGUAGE = config("LANGUAGE_CODE", default="ja")
+if _REQUESTED_LANGUAGE.lower().startswith("ja"):
+    LANGUAGE_CODE = "ja"
+elif _REQUESTED_LANGUAGE.lower().startswith("en"):
+    LANGUAGE_CODE = "en"
+else:
+    LANGUAGE_CODE = _REQUESTED_LANGUAGE
+
+LANGUAGES = [
+    ("ja", "日本語"),
+    ("en", "English"),
+]
+
+LOCALE_PATHS = [BASE_DIR / "locale"]
 
 TIME_ZONE = config("TZ", default="UTC")
 
@@ -371,7 +388,9 @@ TMDB_API = config(
     ),
 )
 TMDB_NSFW = config("TMDB_NSFW", default=False, cast=bool)
-TMDB_LANG = config("TMDB_LANG", default="en")
+TMDB_LANG = config("TMDB_LANG", default="ja-JP")
+# Empty uses BASE_DIR/db, which is /yamtrack/db in the Docker image.
+JA_META_DIR = config("JA_META_DIR", default="")
 
 TVDB_API = config(
     "TVDB_API",

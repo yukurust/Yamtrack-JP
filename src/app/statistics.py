@@ -1,4 +1,3 @@
-import calendar
 import datetime
 import logging
 from collections import defaultdict
@@ -12,8 +11,11 @@ from django.db.models import (
 )
 from django.utils import timezone
 from django.utils.dateparse import parse_date
+from django.utils.dates import MONTHS_3, WEEKDAYS_ABBR
+from django.utils.encoding import force_str
 
 from app import config
+from app.i18n import consumption_label
 from app.models import TV, BasicMedia, Episode, MediaManager, MediaTypes, Season, Status
 from app.templatetags import app_tags
 from users.models import WeekStartDayChoices
@@ -422,11 +424,13 @@ def _consumption_descriptor(media_type, value, unit_noun):
 
     if unit_noun is None:
         # Whole items are counted, so the media type name is the noun.
-        return f"{label}{plural} {verb}"
-    if verb.startswith(unit_noun):
+        phrase = f"{label}{plural} {verb}"
+    elif verb.startswith(unit_noun):
         # Avoid stutter such as "plays played".
-        return f"{label} {unit_noun}{plural}"
-    return f"{label} {unit_noun}{plural} {verb}"
+        phrase = f"{label} {unit_noun}{plural}"
+    else:
+        phrase = f"{label} {unit_noun}{plural} {verb}"
+    return consumption_label(phrase)
 
 
 def get_consumption_stats(user_media, media_count):
@@ -466,12 +470,12 @@ def _build_month_labels(date_range, week_start_weekday):
     """Build month labels and their corresponding week counts for the activity grid."""
     months = []
     weeks_per_month = []
-    current_month = date_range[0].strftime("%b")
+    current_month = force_str(MONTHS_3[date_range[0].month])
     week_count = 0
 
     for current_date in date_range:
         if current_date.weekday() == week_start_weekday:
-            month = current_date.strftime("%b")
+            month = force_str(MONTHS_3[current_date.month])
 
             if current_month != month:
                 if current_month is not None:
@@ -558,7 +562,7 @@ def get_activity_data(user, start_date, end_date):
     months, weeks_per_month = _build_month_labels(date_range, week_start_weekday)
 
     # Weekday labels depend on week start day
-    days = list(calendar.day_abbr)
+    days = [force_str(WEEKDAYS_ABBR[index]) for index in range(7)]
     weekday_labels = [days[6], *days[0:6]] if week_start_sunday else days
 
     return {

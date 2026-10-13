@@ -2,6 +2,7 @@
 {% load static %}
 {% load app_tags %}
 
+{% load i18n %}
 {% block title %}
   {% if request.user != target_user %}{{ target_user.username }}'s{% endif %}
   {{ media_type|media_type_readable_plural }} - Yamtrack
@@ -15,13 +16,13 @@
 
   <div x-data="{ sort: '{{ current_sort }}', status: '{{ current_status }}', layout: '{{ current_layout }}', search: '{{ request.GET.search|default:'' }}', statusLabels: {
     {% for value, label in status_choices %}
-      '{{ value }}': '{{ label }}'
+      '{{ value }}': '{{ label|tr }}'
       {% if not forloop.last %},{% endif %}
 
     {% endfor %}
     }, sortLabels: {
     {% for value, label in sort_choices %}
-      '{{ value }}': '{{ label }}'
+      '{{ value }}': '{{ label|tr }}'
       {% if not forloop.last %},{% endif %}
 
     {% endfor %}
@@ -38,7 +39,7 @@
     <div class="flex flex-col md:flex-row gap-4 mb-6">
       <!-- Search -->
       <div class="relative grow">
-        <input placeholder="Search {{ media_type_plural }} in {% if target_user != request.user %}{{ target_user.username }}'s {% else %}your {% endif %}list..."
+        <input placeholder="{% if target_user != request.user %}{% blocktrans with media=media_type_plural username=target_user.username %}Search {{ media }} in {{ username }}'s list...{% endblocktrans %}{% else %}{% blocktrans with media=media_type_plural %}Search {{ media }} in your list...{% endblocktrans %}{% endif %}"
                class="w-full py-2 pl-10 pr-4 bg-[#39404b] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#4a9eff] appearance-none"
                type="text"
                x-model="search"
@@ -83,7 +84,7 @@
                       class="block w-full px-4 py-2 text-left text-sm transition-colors cursor-pointer"
                       :class="status === '{{ value }}' ? 'bg-indigo-600 text-white font-medium' : 'text-gray-300 hover:bg-[#454d5a] hover:text-white'"
                       @click="status = '{{ value }}'; open = false"
-                      type="button">{{ label }}</button>
+                      type="button">{{ label|tr }}</button>
             {% endfor %}
           </div>
         </div>
@@ -116,7 +117,7 @@
                       class="block w-full px-4 py-2 text-left text-sm transition-colors cursor-pointer"
                       :class="sort === '{{ value }}' ? 'bg-indigo-600 text-white font-medium' : 'text-gray-300 hover:bg-[#454d5a] hover:text-white'"
                       @click="sort = '{{ value }}'; open = false"
-                      type="button">{{ label }}</button>
+                      type="button">{{ label|tr }}</button>
             {% endfor %}
           </div>
         </div>
@@ -126,12 +127,12 @@
           <a :href="`{% url 'medialist' target_user.username media_type %}?${search ? 'search=' + search + '&' : ''}${status !== 'all' ? 'status=' + status + '&' : ''}${sort !== 'score' ? 'sort=' + sort + '&' : ''}layout=grid`"
              class="p-2 cursor-pointer"
              :class="layout === 'grid' ? 'bg-indigo-600 text-white' : 'bg-[#39404b] hover:bg-[#454d5a]'"
-             title="Grid View"
+             title="{% trans 'Grid View' %}"
              @click="layout = 'grid'">{% include "app/icons/four-square.svg" with classes="w-5 h-5" %}</a>
           <a :href="`{% url 'medialist' target_user.username media_type %}?${search ? 'search=' + search + '&' : ''}${status !== 'all' ? 'status=' + status + '&' : ''}${sort !== 'score' ? 'sort=' + sort + '&' : ''}layout=table`"
              class="p-2 cursor-pointer"
              :class="layout === 'table' ? 'bg-indigo-600 text-white' : 'bg-[#39404b] hover:bg-[#454d5a]'"
-             title="Table View"
+             title="{% trans 'Table View' %}"
              @click="layout = 'table'">{% include "app/icons/table.svg" with classes="w-5 h-5" %}</a>
         </div>
       </div>
@@ -164,13 +165,13 @@
           <thead class="text-left text-gray-400 text-sm">
             <tr>
               <th class="p-2 w-15"></th>
-              <th class="p-2 pe-8 w-2/5">Title</th>
-              <th class="p-2 text-center">Score</th>
-              {% if media_type != MediaTypes.MOVIE.value %}<th class="p-2 text-center">Progress</th>{% endif %}
-              {% if media_type == MediaTypes.TV.value %}<th class="p-2 text-center">Last Watched</th>{% endif %}
-              <th class="p-2 text-center">Status</th>
-              <th class="p-2 text-center">Start Date</th>
-              <th class="p-2 text-center">End Date</th>
+              <th class="p-2 pe-8 w-2/5">{% trans 'Title' %}</th>
+              <th class="p-2 text-center">{% trans 'Score' %}</th>
+              {% if media_type != MediaTypes.MOVIE.value %}<th class="p-2 text-center">{% trans 'Progress' %}</th>{% endif %}
+              {% if media_type == MediaTypes.TV.value %}<th class="p-2 text-center">{% trans 'Last Watched' %}</th>{% endif %}
+              <th class="p-2 text-center">{% trans 'Status' %}</th>
+              <th class="p-2 text-center">{% trans 'Start Date' %}</th>
+              <th class="p-2 text-center">{% trans 'End Date' %}</th>
             </tr>
           </thead>
           <tbody>
@@ -239,7 +240,7 @@
             <polyline points="10 17 15 12 10 7"></polyline>
             <line x1="15" x2="3" y1="12" y2="12"></line>
           </svg>
-          Sign In
+          {% trans 'Sign In' %}
         </a>
       </div>
     </div>
