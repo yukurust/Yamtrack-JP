@@ -2891,3 +2891,9 @@ msgstr "自分のリストから%(media)sを検索..."
 #: templates/app/media_list.html
 msgid "Search %(media)s in %(username)s's list..."
 msgstr "%(username)sのリストから%(media)sを検索..."
+
+#: templates/app/components/home_section.html
+#, python-format
+msgid "%(counter)s item"
+msgid_plural "%(counter)s items"
+msgstr[0] "%(counter)s件"

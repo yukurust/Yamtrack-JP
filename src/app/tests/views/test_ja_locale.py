@@ -26,6 +26,7 @@ class JapaneseLocaleRenderingTests(TestCase):
         self.assertContains(response, "ホーム")
         self.assertContains(response, "統計")
         self.assertContains(response, "設定")
+        self.assertContains(response, "0件")
         self.assertNotContains(response, ">Home<")
 
     @patch("app.providers.services.get_media_metadata")

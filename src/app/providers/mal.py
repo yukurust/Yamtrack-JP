@@ -105,7 +105,7 @@ def anime(media_id):
     if data is None:
         url = f"{base_url}/anime/{media_id}"
         params = {
-            "fields": f"{base_fields},num_episodes,average_episode_duration,studios,start_season,broadcast,source,related_anime",  # noqa: E501
+            "fields": _anime_fields(),
         }
 
         try:
@@ -165,12 +165,28 @@ def anime(media_id):
     return localize_anime(media_id, data, mal_payload=mal_payload)
 
 
+def _anime_fields():
+    """Request Japanese titles on related cards without a second MAL call."""
+    fields = (
+        f"{base_fields},num_episodes,average_episode_duration,studios,"
+        "start_season,broadcast,source,related_anime"
+    )
+    node = "{node{id,title,main_picture,alternative_titles}}"
+    return fields.replace("recommendations,", f"recommendations{node},").replace(
+        "related_anime",
+        f"related_anime{node}",
+    )
+
+
 def _search_title(node, *, japanese):
     """Prefer the Japanese MAL title when the UI language is Japanese."""
     if not japanese:
         return node["title"]
-    title_ja = ((node.get("alternative_titles") or {}).get("ja") or "").strip()
-    return title_ja or node["title"]
+    return _japanese_node_title(node) or node["title"]
+
+
+def _japanese_node_title(node):
+    return ((node.get("alternative_titles") or {}).get("ja") or "").strip()
 
 
 def manga(media_id):
@@ -407,6 +423,7 @@ def get_related(related_medias, media_type):
                 "media_id": media["node"]["id"],
                 "source": Sources.MAL.value,
                 "title": media["node"]["title"],
+                "title_ja": _japanese_node_title(media["node"]),
                 "media_type": media_type,
                 "image": get_image_url(media["node"]),
             }

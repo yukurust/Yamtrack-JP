@@ -22,7 +22,7 @@
         {% else %}
           {% include "app/icons/leaf.svg" with classes="h-4 w-4 text-sky-400" %}
         {% endif %}
-        {{ section.count }} item{{ section.count|pluralize }}
+        {% blocktrans count counter=section.count %}{{ counter }} item{% plural %}{{ counter }} items{% endblocktrans %}
       </span>
     </div>
     <div class="relative h-px overflow-hidden rounded-full bg-gray-700/80">

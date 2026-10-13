@@ -86,6 +86,33 @@ class MalJapaneseMetadataTests(TestCase):
         self.assertEqual(ENGLISH["title"], "Cowboy Bebop")
         self.assertEqual(ENGLISH["genres"], ["Action", "Sci-Fi"])
 
+    def test_related_cards_use_japanese_titles(self):
+        """Related and recommendation cards prefer alternative_titles.ja."""
+        data = {
+            **ENGLISH,
+            "related": {
+                "related_anime": [{"title": "Trigun", "title_ja": "トライガン"}],
+                "recommendations": [
+                    {"title": "Samurai Champloo", "title_ja": ""},
+                ],
+            },
+        }
+
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            translation.override("ja"),
+            override_settings(JA_META_DIR=tmp),
+            patch("app.providers.mal_ja._tmdb", return_value={"results": []}),
+        ):
+            result = localize_anime("9", data, mal_payload=PAYLOAD)
+
+        self.assertEqual(result["related"]["related_anime"][0]["title"], "トライガン")
+        self.assertEqual(
+            result["related"]["recommendations"][0]["title"],
+            "Samurai Champloo",
+        )
+        self.assertEqual(data["related"]["related_anime"][0]["title"], "Trigun")
+
     def test_payload_without_japanese_title_is_refetched(self):
         """The anime details response omits alternative_titles, so look them up."""
         incomplete = {

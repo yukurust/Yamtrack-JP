@@ -160,6 +160,7 @@ def localize_anime(media_id, data, mal_payload=None):
         if meta.get("synopsis"):
             localized["synopsis"] = meta["synopsis"]
         _translate_labels(localized)
+        _apply_related_titles(localized)
     except Exception:  # noqa: BLE001 - English metadata must survive any lookup failure
         logger.warning("Japanese localization failed for MAL anime %s", media_id)
         return data
@@ -191,7 +192,34 @@ def _copy_metadata(data):
     genres = data.get("genres")
     if isinstance(genres, list):
         localized["genres"] = list(genres)
+    related = data.get("related")
+    if isinstance(related, dict):
+        localized["related"] = {
+            name: _copy_related_items(items) for name, items in related.items()
+        }
     return localized
+
+
+def _copy_related_items(items):
+    if not isinstance(items, list):
+        return items
+    return [dict(item) for item in items]
+
+
+def _apply_related_titles(data):
+    """Use MAL alternative_titles.ja on related and recommendation cards."""
+    related = data.get("related")
+    if not isinstance(related, dict):
+        return
+    for items in related.values():
+        if not isinstance(items, list):
+            continue
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            title_ja = (item.get("title_ja") or "").strip()
+            if title_ja:
+                item["title"] = title_ja
 
 
 def _translate_labels(data):
